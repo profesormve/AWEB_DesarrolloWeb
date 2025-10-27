@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+	<!--  CHATSET - Define la codificación de caracteres. UTF-8 permite mostrar correctamente acentos, emojis y símbolos especiales. -->
+    <meta charset="UTF-8" />
+    
+    <!-- META VIEWPORT (RESPONSIVE)  - Controla cómo se ve la página en dispositivos móviles.
+		Los atributos más importantes son:
+		- width: ancho del viewport
+		- height: altura del viewport
+		- initial-scale: zoom inicial
+		- minimum-scale: zoom mínimo permitido
+		- maximum-scale: zoom máximo permitido
+		- user-scalable: permite al usuario hacer zoom
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes"
+    />
+
+    <!-- TÍTULO Y FAVICON 
+		Favicon: ícono que aparece en la pestaña del navegador.
+			- Tamaño recomendado: 32x32 px
+			- Formato: .ico, .png o .svg
+			- Si no se incluye, el navegador buscará favicon.ico en la raíz 
+	-->
+    <title>Mi Página Web - Optimizada con Metadatos</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- METADATOS SEO 
+		# DESCRIPTION
+		Proporciona un resumen de la página para buscadores.
+		- Máximo recomendado: 155 caracteres
+		- Palabras clave relevantes ayudan al SEO 
+
+		#KEYWORDS
+		Palabras clave relacionadas con el contenido de la página. Su importancia ha disminuido, pero algunos buscadores aún las usan.
+
+		#ROBOTS
+		Indica a los motores de búsqueda que:
+			- index → indexar la página
+			- follow → seguir los enlaces
+
+		# THEME-COLOR
+		Color del navegador móvil (Chrome, Edge, Android). Personaliza la barra de herramientas del navegador
+
+		# AUTHOR
+		Información del autor de la web.
+	-->
+    <meta name="description" content="Descripción breve y atractiva de mi página web para mejorar el SEO y atraer visitantes." />
+    <meta name="keywords" content="diseño web, desarrollo web, html, css, javascript"/>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ff0000" />
+    <meta name="author" content="Carlos Arturo" />
+
+    <!-- OPEN GRAPH (REDES SOCIALES)
+		Open Graph controla la vista previa de la página al compartirse en redes sociales:
+			- og:title → título de la publicación
+			- og:description → descripción resumida
+			- og:image → imagen mostrada (mínimo 1200x630 px)
+			- og:url → URL de la página
+			- og:type → tipo de contenido (website, article, etc.)
+	-->
+
+    <meta property="og:title" content="Mi Página Web Atractiva" />
+    <meta property="og:description" content="Una breve descripción que engancha y resume el contenido de la página."/>
+    <meta property="og:image" content="https://miwebsite.com/imagen.jpg" />
+    <meta property="og:url" content="https://miwebsite.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- TWITTER CARDS -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Título para Twitter" />
+    <meta name="twitter:description" content="Descripción optimizada para Twitter, breve y llamativa." />
+    <meta name="twitter:image" content="https://miwebsite.com/imagen.jpg" />
+
+    <!-- ETIQUETAS CANÓNICAS Y ALTERNATIVAS
+		rel="canonical" : Indica a los motores de búsqueda la URL principal de la página. Evita problemas de contenido duplicado
+		rel="alternate" : Indica versiones alternativas de la página (ej. en otros idiomas)
+	-->
+
+    <link rel="canonical" href="https://miwebsite.com/pagina-principal" />
+    <link rel="alternate" href="https://miwebsite.com/en" hreflang="en" />
+
+    <!-- 
+		Resumen y buenas prácticas:
+		1. Siempre usar <meta charset="UTF-8"> para compatibilidad de caracteres.
+		2. Combinar width=device-width + initial-scale=1.0 para responsive.
+		3. Ajustar minimum-scale y maximum-scale según necesidad de zoom.
+		4. Mantener user-scalable=yes para accesibilidad.
+		5. Agregar un favicon para identidad visual.
+		6. Incluir title y description optimizados para SEO.
+		7. Revisar etiquetas Open Graph y Twitter Cards antes de compartir.
+		8. Usar canonical y alternate para evitar problemas de contenido duplicado o multilenguaje.
+	-->
+  </head>
+
+  <body>
+    <h1>Ejemplo Completo de Metadatos y Viewport</h1>
+    <p>
+      Este archivo integra todos los metadatos esenciales para SEO, redes
+      sociales, favicon y viewport con explicación detallada dentro de
+      comentarios.
+    </p>
+  </body>
+</html>
