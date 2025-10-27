@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Diferencias entre id y class</title>
+
+		<!--	=========================================  -->
+		<!--	Diferencias entre id y class en CSS y HTML -->
+		<!--	=========================================  
+
+			1. id
+			- Es un identificador único para un solo elemento en la página.
+			- Solo puede usarse una vez por documento HTML.
+			- Se selecciona en CSS con # seguido del nombre del id, por ejemplo: #boton-rojo.
+			- Se usa para estilos o funciones (JavaScript) que deben aplicarse a un único elemento.
+
+			2. class
+			- Es una clase que puede asignarse a varios elementos.
+			- Se pueden usar múltiples veces en el documento para agrupar elementos con estilos o comportamientos similares.
+			- Se selecciona en CSS con . seguido del nombre de la clase, por ejemplo: .boton-rojo.
+			- Permite reutilizar estilos y es más flexible.
+        -->
+		
+	</head>
+
+	<body>
+		<!-- PRIMER EJEMPLO: USANDO UN MISMO id (INCORRECTO) -->
+
+		<style>
+			#boton-rojo {
+				color: red;
+			}
+		</style>
+
+		<section>
+			<h2>Ejemplo 1 – Mismo id repetido (mala práctica)</h2>
+			<a href="#" id="boton-rojo">Enlace 1</a>
+			<a href="#" id="boton-rojo">Enlace 2</a>
+			<a href="#" id="boton-rojo">Enlace 3</a>
+
+			<!--  Problema:
+				- Estás usando el mismo id="boton-rojo" en varios elementos, lo cual es incorrecto según la especificación HTML.
+				- El id debe ser único en la página.
+				- Aunque el navegador puede aplicar el estilo, es una mala práctica y puede causar problemas con JavaScript o accesibilidad.
+			-->
+		</section>
+
+		<!-- SEGUNDO EJEMPLO: USANDO VARIOS id DIFERENTES -->
+
+		<style>
+			#enlace1,
+			#enlace2,
+			#enlace3 {
+				color: red;
+			}
+		</style>
+
+		<section>
+			<h2>Ejemplo 2 – IDs diferentes, mismo estilo</h2>
+			<a href="#" id="enlace1">Enlace 1</a>
+			<a href="#" id="enlace2">Enlace 2</a>
+			<a href="#" id="enlace3">Enlace 3</a>
+
+			<!-- Explicación:
+				- Cada enlace tiene un id único (enlace1, enlace2, enlace3), correcto y recomendado.
+				- En el CSS se usa un selector combinado con comas para aplicar el mismo estilo a los tres diferentes IDs.
+				- Es funcional, pero si tienes muchos elementos con el mismo estilo, repetir IDs no es práctico.
+			-->
+		</section>
+
+		<!-- TERCER EJEMPLO: USANDO CLASS (FORMA CORRECTA) -->
+
+		<style>
+			.boton-rojo {
+				color: red;
+			}
+		</style>
+
+		<section>
+			<h2>Ejemplo 3 – Uso de class (recomendado)</h2>
+			<a href="#" id="enlace1" class="boton-rojo">Enlace 1</a>
+			<a href="#" id="enlace2" class="boton-rojo">Enlace 2</a>
+			<a href="#" id="enlace3" class="boton-rojo">Enlace 3</a>
+
+			<!-- Explicación:
+				- Cada enlace tiene un id único, lo cual es correcto.
+				- Además, los tres comparten la clase boton-rojo, que aplica el mismo estilo color: red a todos ellos.
+				- Es la forma más correcta y eficiente para aplicar estilos compartidos a varios elementos.
+				- La combinación de id y class permite seleccionar individualmente elementos o por grupo.
+			-->
+		</section>
+	</body>
+</html>
+

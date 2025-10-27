@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Audio</title>
+	</head>
+	<body>
+		<!-- ===============================================    -->
+		<!--	ETIQUETA <audio>                                -->
+		<!--	=============================================== 
+			La etiqueta <audio> permite insertar archivos de sonido
+			en una página web (música, efectos, grabaciones, etc.).
+			Se introdujo en HTML5.
+			
+			📌 Sintaxis básica:
+				<audio src="ruta/archivo.mp3" controls></audio>
+				
+			📌 También puede incluir varias fuentes con <source>
+			para asegurar compatibilidad entre navegadores.
+			
+			📌 Atributos comunes:
+				- controls → muestra los controles de reproducción
+				- autoplay → reproduce automáticamente (sin intervención del usuario)
+				- loop → repite el audio al finalizar
+				- muted → inicia el audio silenciado
+				- preload → indica si se debe precargar el audio (auto / metadata / none)
+				
+			📌 Texto alternativo:
+				Se puede incluir dentro de <audio> un texto que se mostrará
+				si el navegador no soporta el elemento.
+		-->
+
+		<audio controls>
+			<!-- Cada etiqueta <source> indica una posible versión del mismo audio
+				en distintos formatos. El navegador elegirá el primero que soporte.
+				Atributos:
+				- src → ruta del archivo de audio
+				- type → tipo MIME del formato
+			-->
+			<source src="media/hyperfun.mp3" type="audio/mpeg" />
+			<source src="media/hyperfun.ogg" type="audio/ogg" />
+
+			<!-- Este texto se muestra si el navegador no puede reproducir audio. -->
+			Tu navegador no soporta la etiqueta de audio de HTML
+		</audio>
+
+		<!-- 
+			===============================================
+			FORMATOS DISPONIBLES Y TIPOS MIME
+			===============================================
+			Formato		 	Media Type
+			-------------------------------
+			MP3 			audio/mpeg
+			Ogg 			audio/ogg
+			Wav 			audio/wav
+		-->
+
+		<!-- 
+			===============================================
+			SOPORTE SEGÚN NAVEGADOR
+			===============================================
+			Navegador 	MP3 	Wav 	Ogg
+			--------------------------------
+			IExplorer 	SI 		NO 		NO
+			Chrome 		SI 		SI 		SI
+			Firefox 	SI 		SI 		SI
+			Safari 		SI 		SI 		NO
+			Opera 		SI 		SI 		SI
+
+			✅ Recomendación:
+			Para máxima compatibilidad, conviene ofrecer
+			MP3 y OGG (dos <source> como en el ejemplo).
+		-->
+	</body>
+</html>
