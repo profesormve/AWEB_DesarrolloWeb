@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <!-- ===================================================== -->
+    <!-- INTRODUCCION A LOS FORMULARIOS -->
+    <!-- ===================================================== -->
+    <!-- 
+        Un formulario HTML permite recopilar información del usuario.
+        Sus componentes principales son:
+        - <form> (contenedor del formulario)
+        - <input> (campos de entrada)
+        - <label> (etiquetas descriptivas)
+        - <select>, <textarea>, <datalist>, <fieldset>
+    -->
+
+    <!-- ===================================================== -->
+    <!-- FORMATO INPUT -->
+    <!-- ===================================================== -->
+    <!-- 
+        La etiqueta <input> se utiliza para crear campos de entrada de datos.
+        ESTRUCTURA BÁSICA:
+            <input type="tipo" name="nombre" id="identificador">
+
+        ATRIBUTOS MÁS USADOS:
+        🔹 type        → Define el tipo de dato que se pedirá al usuario: text, email, password, number, date, checkbox, radio, etc.
+        🔹 name        → Nombre del campo. Es la clave con la que el dato se enviará al servidor.
+        🔹 id          → Identificador único del elemento (sirve para asociarlo con un <label> o usarlo en Javascript).
+        🔹 placeholder → Muestra un texto guía dentro del campo.
+        🔹 value       → Valor predeterminado (por defecto) del campo.
+        🔹 required    → Hace obligatorio completar el campo antes de enviar el formulario.
+        🔹 maxlength   → Número máximo de caracteres permitidos.
+        🔹 minlength   → Número mínimo de caracteres requeridos.
+        🔹 pattern     → Expresión regular para validar el formato del dato.
+        🔹 disabled    → Desactiva el campo (no se puede escribir ni enviar).
+        🔹 readonly    → El campo se puede ver pero no modificar.
+
+    -->
+
+    <!-- <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required> -->
+
+    <!-- ===================================================== -->
+    <!-- FORMATO LABEL -->
+    <!-- ===================================================== -->
+    <!-- 
+        La etiqueta <label> proporciona una descripción textual para un campo <input>.
+        Ayuda a la accesibilidad (los lectores de pantalla la leen junto al input) y también mejora la usabilidad: al hacer clic sobre el texto del label, se activa automáticamente el input asociado.
+
+        FORMATO GENERAL:
+            <label for="id_del_input">Texto descriptivo</label>
+
+        ATRIBUTOS:
+        🔹 for → Indica con qué input se asocia. Su valor debe coincidir con el atributo id del input.
+                Ejemplo: <label for="correo">Correo:</label>  se asocia con  <input id="correo">
+        🔹 name, id (opcionales)
+
+        EJEMPLOS:
+        <label for="nombre">Nombre:</label>
+        <label for="correo">Correo electrónico:</label>
+
+        También se puede usar SIN “for”, conteniendo el input dentro:
+        <label>Nombre: <input type="text" name="nombre"></label>
+        Esta forma es más corta, pero menos usada en formularios grandes.
+    -->
+
+    <!-- <label for="nombre">Nombre</label>
+    <br>
+    <label>
+        Nombre
+        <input type="text" name="nombre">
+    </label> -->
+
+    <!-- ===================================================== -->
+    <!-- FORMATO FORM -->
+    <!-- ===================================================== -->
+    <!-- 
+        La etiqueta <form> crea un formulario para recopilar datos del usuario. 
+        ATRIBUTOS PRINCIPALES:
+        - action  : URL donde se enviarán los datos. Ej: action="procesar.php"
+        - method  : Método de envío, "get" o "post". Ej: method="post"
+        - id      : Identificador único para CSS o JS. Ej: id="formulario1"
+        - name    : Nombre del formulario. Ej: name="formulario1"
+        - enctype : Codificación de datos. Ej: enctype="multipart/form-data"
+        - autocomplete : Autocompletado, "on" o "off"
+
+        ESTRUCTURA BÁSICA:
+        <form action="#" method="post" id="form1" name="form1">
+            campos de entrada aquí 
+        </form>
+    -->
+
+    <!-- <form
+      action="#"
+      method="post"
+      id="form1"
+      name="form1"
+    >
+        <label>
+            Nombre
+            <input type="text" name="nombre">
+        </label> 
+    </form> -->
+
+    <!-- ===================================================== -->
+    <!-- AGRUPAR INPUTS - USO DE FIELDSET -->
+    <!-- ===================================================== -->
+    <!-- 
+        <fieldset> se utiliza para agrupar visual y semánticamente un conjunto de campos relacionados dentro de un formulario.
+        Esto mejora la accesibilidad y la organización del formulario, especialmente cuando hay varios inputs relacionados, como
+        opciones de género, preferencias o suscripciones.
+
+        UTILIZA: 
+        🔹 <fieldset> → Agrupa visual y semánticamente varios inputs relacionados.
+        🔹 <legend>  → Título o descripción del grupo. Se coloca dentro de fieldset.
+        🔹 id       → Identificador único del fieldset (opcional, útil para CSS/JS)
+        🔹 name     → Nombre del grupo (opcional, menos usado que en inputs)
+    -->
+
+    <!--     <fieldset>
+        <legend>Suscripciones</legend>
+        <input type="checkbox" id="noticias" name="noticias">
+        <label for="noticias">Deseo recibir noticias</label>
+
+        <input type="checkbox" id="promos" name="promos">
+        <label for="promos">Deseo recibir promociones</label>
+    </fieldset> -->
+
+    <!-- ===================================================== -->
+    <!-- TIPOS DE INPUTS -->
+    <!-- ===================================================== -->
+
+    <!-- 1. INPUT TYPE="text" -- Campo de texto simple, usado para nombres, apellidos, etc. -->
+    <!-- <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      placeholder="Escribe tu nombre"
+      maxlength="40"
+      required
+    /> <br /> -->
+
+    <!-- 2. INPUT TYPE="password" -- Campo que oculta caracteres (contraseña) -->
+    <!-- <input
+      type="password"
+      id="clave"
+      name="clave"
+      placeholder="Mínimo 6 caracteres"
+      minlength="6"
+      maxlength="12"
+      required
+    /><br /> -->
+
+    <!-- 3. INPUT TYPE="email" -- Valida automáticamente formato de correo -->
+    <!-- <input
+      type="email"
+      id="correo"
+      name="correo"
+      placeholder="usuario@correo.com"
+      required
+    /><br /> -->
+
+    <!-- 4. INPUT TYPE="number" -- Solo números, con min y max -->
+    <!-- <input
+      type="number"
+      id="edad"
+      name="edad"
+      min="0"
+      max="120"
+      placeholder="Ej: 25"
+    /><br /> -->
+
+    <!-- 5. INPUT TYPE="tel" -- Números de teléfono, puede usar pattern -->
+    <!-- <input
+      type="tel"
+      id="telefono"
+      name="telefono"
+      pattern="[0-9]{9}"
+      placeholder="999999999"
+    /><br /> -->
+
+    <!-- 6. INPUT TYPE="url" --  Valida URL -->
+    <!-- <input
+      type="url"
+      id="sitio"
+      name="sitio"
+      placeholder="https://tusitio.com"
+    /><br /> -->
+
+    <!-- 7. INPUT TYPE="search" --  Campo de búsqueda -->
+    <!-- <input
+      type="search"
+      id="busqueda"
+      name="busqueda"
+      placeholder="Buscar algo..."
+    /><br /> -->
+
+    <!-- 8. INPUT TYPE="date" -->
+    <!-- <input type="date" id="fecha" name="fecha" /><br /> -->
+
+    <!-- 9. INPUT TYPE="time" -->
+    <!-- <input type="time" id="hora" name="hora" /><br /> -->
+
+    <!-- 10. INPUT TYPE="color" -->
+    <!-- <input type="color" id="colorFav" name="colorFav" value="#0000ff" /><br /> -->
+
+    <!-- 11. INPUT TYPE="range" -->
+    <!-- <input
+      type="range"
+      id="nivel"
+      name="nivel"
+      min="0"
+      max="10"
+      step="1"
+      value="5"
+    /><br /> -->
+
+    <!-- 12. INPUT TYPE="checkbox" -->
+    <!-- <fieldset>
+      <legend>Suscripciones</legend>
+      <input type="checkbox" id="noticias" name="noticias" checked />
+      <label for="noticias">Noticias</label>
+      <input type="checkbox" id="promos" name="promos" />
+      <label for="promos">Promociones</label>
+    </fieldset>
+    <br /> -->
+
+    <!-- 13. INPUT TYPE="radio" -- OJO: uso de "name" para que solo se pueda seleccionar uno -->
+    <!-- <fieldset>
+      <legend>Género</legend>
+      <input type="radio" id="masculino" name="genero" value="masculino" />
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="femenino" name="genero" value="femenino" />
+      <label for="femenino">Femenino</label>
+      <input type="radio" id="otro" name="genero" value="otro" />
+      <label for="otro">Otro</label>
+    </fieldset>
+    <br /> -->
+
+    <!-- ===================================================== -->
+    <!-- 14. INPUT TYPE="file" -->
+    <!-- <input type="file" id="archivo" name="archivo" accept=".pdf,.jpg,.png" />
+    <br /> -->
+
+    <!-- ===================================================== -->
+    <!-- 15. INPUT TYPE="hidden" -- Campo invisible para enviar datos al servidor sin mostrarlos al usuario. -->
+    <!-- <input type="hidden" name="codigo_formulario" value="12345" />
+    <br /> -->
+
+    <!-- ===================================================== -->
+    <!-- BOTONES DE ENVÍO Y REINICIO DEL FORMULARIO -->
+    <!-- ===================================================== -->
+    <!-- 
+        1️⃣ input type="submit" → Envía los datos del formulario.
+        2️⃣ input type="reset" → Reinicia todos los campos a su valor inicial.
+        3️⃣ input type="image" → Imagen que funciona como submit (envía también coordenadas del clic).
+        4️⃣ button type="submit" → Alternativa a input submit.
+    -->
+
+    <!-- 1. INPUT TYPE="reset" --  Botón que reinicia el formulario -->
+    <!-- <input type="reset" value="Borrar datos" />
+    <br> -->
+
+    <!-- 2. INPUT TYPE="submit"  --  Enviar formulario -->
+    <!-- <input type="submit" value="Enviar formulario" />
+    <br /> -->
+
+    <!-- 3. INPUT TYPE="image"  --  Enviar formulario pero en lugar de boton una imagen "clickeable"-->
+    <!-- <input
+        type="image"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/120px-PNG_transparency_demonstration_1.png"
+        alt="Enviar"
+        width="50"
+    /> <br /> -->
+
+    <!-- 4. Botón submit usando <button> -->
+    <!-- <button type="submit">Enviar formulario</button>
+    <br /><br /> -->
+
+    <!-- ===================================================== -->
+    <!-- EXTRA: <textarea> -- Permite escribir texto largo, como comentarios o mensajes. -->
+    <!-- ===================================================== -->
+    <!-- <textarea
+      name="mensaje"
+      id="mensaje"
+      rows="5"
+      cols="40"
+      placeholder="Escribe aquí tu mensaje..."
+    ></textarea> -->
+
+    <!-- ===================================================== -->
+    <!-- EXTRA: <select> -->
+    <!-- ===================================================== -->
+    <!-- <select name="pais" id="pais">
+      <option value="">Seleccione...</option>
+      <option value="mexico">México</option>
+      <option value="españa">España</option>
+      <option value="argentina">Argentina</option>
+      <option value="peru">Perú</option>
+    </select> -->
+
+    <!-- ===================================================== -->
+    <!-- EXTRA: <datalist> -->
+    <!-- ===================================================== -->
+    <!-- <input list="ciudades" name="ciudad" placeholder="Empieza a escribir..." />
+    <datalist id="ciudades">
+      <option value="Madrid"></option>
+      <option value="Buenos Aires"></option>
+      <option value="Ciudad de México"></option>
+      <option value="Lima"></option>
+      <option value="Bogotá"></option>
+    </datalist> -->
+
+    <!-- ===================================================== -->
+    <!-- FORMULARIOS EN HTML - EJEMPLO COMPLETO -->
+    <!-- ===================================================== -->
+    <!-- 
+  Recomendaciones al crear formularios:
+  🔹 Encerrar todos los campos dentro de <form>.
+  🔹 Usar <fieldset> para agrupar inputs relacionados (mejora la accesibilidad y organización).
+  🔹 Cada input debe tener un "name" → nombre del campo que se envía al servidor.
+  🔹 Usar "id" → identifica el input, permite asociarlo con <label> mediante "for".
+  🔹 Para pruebas, se puede enviar a https://httpbin.org/post (muestra los datos enviados).
+-->
+
+    <!-- <form
+      action="https://httpbin.org/post"
+      method="post"
+      id="formularioCompleto"
+      name="formularioCompleto"
+    >
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre"
+          required
+          pattern="[A-Za-z\s]{2,40}"
+          title="Solo letras, entre 2 y 40 caracteres"
+        />
+        <br /><br />
+
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          id="apellido"
+          name="apellido"
+          placeholder="Tu apellido"
+          required
+          pattern="[A-Za-z\s]{2,40}"
+          title="Solo letras, entre 2 y 40 caracteres"
+        />
+        <br /><br />
+
+        <label for="correo">Correo electrónico:</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="usuario@correo.com"
+          required
+        />
+        <br /><br />
+
+        <label for="clave">Contraseña:</label>
+        <input
+          type="password"
+          id="clave"
+          name="clave"
+          placeholder="Mínimo 6 caracteres"
+          minlength="6"
+          maxlength="12"
+          required
+        />
+      </fieldset>
+      <br />
+
+
+      <fieldset>
+        <legend>Información adicional</legend>
+
+        <label for="edad">Edad:</label>
+        <input
+          type="number"
+          id="edad"
+          name="edad"
+          min="0"
+          max="120"
+          placeholder="Ej: 25"
+          required
+        />
+        <br /><br />
+
+        <label for="telefono">Teléfono:</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          pattern="[0-9]{9}"
+          placeholder="999999999"
+          title="Introduce 9 dígitos"
+        />
+        <br /><br />
+
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input
+          type="date"
+          id="fechaNacimiento"
+          name="fechaNacimiento"
+          required
+        />
+        <br /><br />
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+          <option value="">Selecciona un país</option>
+          <option value="mexico">México</option>
+          <option value="españa">España</option>
+          <option value="argentina">Argentina</option>
+          <option value="peru">Perú</option>
+        </select>
+        <br /><br />
+
+        <label for="colorFav">Color favorito:</label>
+        <input type="color" id="colorFav" name="colorFav" value="#0000ff" />
+        <br /><br />
+
+        <label for="archivo">Subir archivo (PDF/JPG/PNG):</label>
+        <input
+          type="file"
+          id="archivo"
+          name="archivo"
+          accept=".pdf,.jpg,.png"
+        />
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>Preferencias</legend>
+
+        <label>Idioma:</label>
+        <input
+          type="radio"
+          id="español"
+          name="idioma"
+          value="español"
+          checked
+        />
+        <label for="español">Español</label>
+        <input type="radio" id="ingles" name="idioma" value="ingles" />
+        <label for="ingles">Inglés</label>
+        <br /><br />
+
+        <input type="checkbox" id="terminos" name="terminos" required />
+        <label for="terminos">Aceptar términos y condiciones</label>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>Acciones del formulario</legend>
+        <input type="reset" value="Borrar datos" />
+        <input type="submit" value="Enviar formulario" />
+        <button type="submit">Enviar con Button</button>
+        <input
+          type="image"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/%40_symbol.svg/250px-%40_symbol.svg.png"
+          alt="Enviar"
+          width="50"
+        />
+      </fieldset>
+    </form> -->
+  </body>
+</html>
