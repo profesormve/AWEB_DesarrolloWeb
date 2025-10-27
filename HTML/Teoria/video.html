@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+
+    <!-- ===============================================	-->
+    <!-- 	ETIQUETA <video>	-->
+    <!-- ===============================================
+			La etiqueta <video> permite insertar y reproducir videos directamente en una página web sin necesidad de complementos externos (como Flash, que se usaba antes).
+
+			➡️ Se introdujo en HTML5 y es el estándar actual para mostrar contenido multimedia de video.
+
+			📘 Sintaxis básica:
+				<video src="ruta/video.mp4" controls></video>
+
+			📘 También puede incluir múltiples <source> para ofrecer distintos formatos del mismo video y asegurar compatibilidad con todos los navegadores.
+
+			===============================================
+			ATRIBUTOS PRINCIPALES DE <video>
+			===============================================
+			- src → ruta del archivo de video (si no se usan <source>)
+			- controls → muestra los controles (reproducir, pausa, volumen…)
+			- autoplay → reproduce automáticamente el video al cargar la página
+			- loop → repite el video al finalizar
+			- muted → inicia el video sin sonido
+			- width / height → define el tamaño del reproductor (en píxeles)
+			- poster → imagen que se muestra antes de reproducir el video
+			- preload → indica si se precarga el video (auto / metadata / none)
+
+			💡 El texto incluido dentro de la etiqueta <video> se muestra si el navegador no soporta este elemento.
+		-->
+	</head>
+  <body>
+    <!-- Ejemplo de uso de la etiqueta <video> -->
+    <video width="600" controls poster="imagenes/paisaje1.jpg">
+      <!-- Las etiquetas <source> permiten especificar varios formatos del mismo video. El navegador reproducirá el primero que reconozca.
+	   		Atributos de <source>:
+				- src → ruta del archivo de video
+				- type → tipo MIME del formato
+		-->
+      <source src="media/video.mp4" type="video/mp4" />
+
+      <!--
+			Se pueden añadir más fuentes para otros formatos:
+				<source src="media/video.webm" type="video/webm">
+				.(preload="none" evita descargar el video hasta que el 
+			usuario haga clic en "Reproducir").<source src="media/video.ogg" type="video/ogg">
+		-->
+
+      <!-- 
+			Texto alternativo mostrado si el navegador no soporta videos.
+		-->
+      Tu navegador no soporta la etiqueta de video de HTML5
+    </video>
+
+    <!-- 
+		===============================================
+		FORMATOS DISPONIBLES Y TIPOS MIME
+		===============================================
+		Formato		Media Type
+		-------------------------------
+		MP4			video/mp4
+		WebM		video/webm
+		Ogg			video/ogg
+
+		✅ Recomendación: Ofrecer al menos MP4 + WebM para compatibilidad total.
+	-->
+    <!-- 
+		===============================================
+		SOPORTE SEGÚN NAVEGADOR
+		===============================================
+			Navegador	MP4		WebM	Ogg
+		--------------------------------
+			IExplorer	SI		NO		NO
+			Chrome		SI		SI		SI
+			Firefox		SI		SI		SI
+			Safari		SI		NO		NO
+			Opera		SI		SI		SI
+
+		💡 MP4 (H.264 + AAC) es el formato más universal.
+	-->
+
+    <!-- 
+		===============================================
+		OTROS ATRIBUTOS ÚTILES DE LA ETIQUETA <video>
+		===============================================
+
+		1️⃣ Reproducción automática:
+
+			<video src="video.mp4" autoplay muted></video>
+			
+			⚠️ El atributo muted es obligatorio para que autoplay funcione en la mayoría de los navegadores modernos.
+
+		2️⃣ Video en bucle:
+
+			<video src="video.mp4" loop controls></video>
+
+			➡️ El video se reproducirá continuamente una vez termine.
+
+		3️⃣ Precarga optimizada:
+
+			<video src="video.mp4" preload="metadata" controls></video>
+
+			➡️ Se cargan solo los metadatos (duración, tamaño, etc.).
+
+		-----------------------------------------------
+		⚙️ VALORES POSIBLES DEL ATRIBUTO preload
+		-----------------------------------------------
+		* none → El navegador no descarga nada del video hasta que el usuario lo reproduzca.
+		  ✅ Ahorra datos y acelera la carga de la página.
+
+		* metadata → Solo se descargan los metadatos del archivo (duración, tamaño, dimensiones, etc.).
+		  ✅ Recomendado por defecto. Permite mostrar información básica sin cargar el video completo.
+
+		* auto → El navegador puede descargar parte o todo el video automáticamente para mejorar la fluidez.
+		  ⚠️ Puede aumentar el consumo de datos si hay varios videos.
+		-->
+	</body>
+</html>
