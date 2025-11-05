@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Etiquetas de maquetado</title>
+
+		<!-- 
+			📘 TEMA: ETIQUETAS DE MAQUETADO Y SEMÁNTICA EN HTML5
+
+			Objetivo: Comprender la diferencia entre maquetar con etiquetas genéricas (<div>) 
+			y usar etiquetas semánticas (<header>, <main>, <article>, etc).
+
+			👉 Importancia:
+			- Las etiquetas semánticas aportan significado al contenido.
+			- Ayudan a los motores de búsqueda (SEO) a entender mejor la estructura de la web.
+			- Mejoran la accesibilidad (por ejemplo, los lectores de pantalla identifican mejor cada parte).
+			- Facilitan el mantenimiento del código.
+		-->
+
+	</head>
+	
+	<body>
+
+		<!-- ====================================================== -->
+		<!-- EJEMPLO SIN SEMÁNTICA                              	-->
+		<!-- ====================================================== -->
+
+		<!--  Las etiquetas <div> permiten agrupar contenido, pero no dicen qué representa cada bloque (no tienen significado propio).
+			El navegador no sabe si un <div> es una cabecera, un artículo o un pie de página.
+			Por eso se dice que <div> no aporta información semántica.
+		-->
+		
+		<div class="header">	<!-- Cabecera -->
+			<div class="nav">   <!-- Navegación -->
+				<a href="#">Menú 1</a>
+				<a href="#">Menú 2</a>
+			</div>
+		</div>
+
+		<div class="main">		<!-- Cuerpo principal -->
+			<div class="articulo">  <!-- Articulo -->
+				<h3 class="titulo">Este es el titulo de mi post</h3>
+				<p class="fecha">07 de Septiembre de 1995</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quae.</p>
+				<img src="img/logo_chan_do_monte.webp" alt="Logo chan do monte" />
+			</div>
+		</div>
+
+		<div class="sidebar"> 	<!-- Contenido lateral -->
+			<p>Texto del sidebar</p>
+		</div>
+
+		<div class="footer">	<!-- Pie de pagina -->
+			<p>Texto del footer</p>
+		</div>
+
+		<!-- 
+			➡️ En este ejemplo:
+			Visualmente puede verse bien, pero semánticamente no se sabe qué es cada parte.
+			Google o un lector de pantalla no pueden interpretar qué secciones son principales o secundarias.
+		-->
+
+
+		<!-- ====================================================== -->
+		<!-- 2️⃣ EJEMPLO CON SEMÁNTICA                              -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			HTML5 introdujo etiquetas específicas para estructurar el contenido de forma más clara.
+			Estas etiquetas informan al navegador del papel que cumple cada bloque dentro de la página.
+			Esto mejora:
+				✅ El SEO (posicionamiento web)
+				✅ La accesibilidad
+				✅ La claridad y mantenimiento del código
+		-->
+
+		<!-- ====================================================== -->
+		<!-- 3️⃣ PRINCIPALES ETIQUETAS SEMÁNTICAS                   -->
+		<!-- ====================================================== -->
+		<!-- 
+			<header>   → Cabecera del documento o de una sección.
+			<nav>      → Bloque de enlaces de navegación.
+			<main>     → Contenido principal del documento (solo uno por página).
+			<section>  → Agrupación temática de contenido.
+			<article>  → Contenido independiente (post, noticia, comentario...).
+			<aside>    → Contenido lateral o complementario (sidebar, publicidad...).
+			<footer>   → Pie de página o de sección.
+			<figure>   → Agrupa contenido visual o ilustrativo (imagen, gráfico...).
+			<figcaption> → Pie de figura o descripción de una imagen.
+			<time>     → Fecha/hora legible por humanos y por máquina.
+			<mark>     → Resalta texto relevante.
+			<code>     → Representa fragmentos de código.
+		-->
+		<!-- TIP VSCODE:  CAMBIAR UNA ETIQUETA PULSAR EN LA ETIQUETA Y CRLT + F2  PERMITE CAMBIAR LA ETIQEUTA (APERTURA & CIERRE)-->
+
+
+		<!-- EJEMPLO CON SEMANTICA -->
+		<header class="header">
+			<!-- <header>: Cabecera principal del sitio -->
+			<h1>Mi Blog Personal</h1>
+
+			<!-- <nav>: Menú de navegación -->
+			<nav class="nav">
+				<a href="#">Inicio</a>
+				<a href="#">Artículos</a>
+				<a href="#">Contacto</a>
+			</nav>
+		</header>
+
+		<!-- <main>: Contenido principal de la página -->
+		<main class="main">
+
+			<!-- <article>: Representa un contenido independiente (post, noticia, etc.) -->
+			<article class="articulo">
+				<h2 class="titulo">Este es el título de mi post</h2>
+
+				<!-- <time>: Representa una fecha o hora en formato legible para humanos y máquinas -->
+				<time datetime="1995-09-07" class="fecha">07 de Septiembre de 1995</time>
+
+				<p>
+					Lorem ipsum dolor sit amet
+					<!-- <mark>: Resalta una parte importante del texto -->
+					<mark>consectetur adipisicing elit.</mark> Doloremque, quae.
+				</p>
+
+				<!-- <figure> y <figcaption>: Agrupan una imagen y su pie o descripción -->
+				<figure>
+					<img src="img/logo_chan_do_monte.webp" alt="Logo chan do monte" />
+					<figcaption>Montaña Nevada al atardecer</figcaption>
+				</figure>
+			</article>
+
+			<!-- <section>: Agrupa un bloque temático de contenido -->
+			<section>
+				<h3>Información adicional</h3>
+				<p>
+					Este texto pertenece a una sección dentro del contenido principal. 
+					Puede contener artículos, bloques de información o textos relacionados.
+				</p>
+			</section>
+		</main>
+
+		<!-- <aside>: Contenido lateral o complementario al principal -->
+		<aside class="sidebar">
+			<h4>Últimos artículos</h4>
+			<ul>
+				<li><a href="#">Artículo 1</a></li>
+				<li><a href="#">Artículo 2</a></li>
+			</ul>
+			<p>Publicidad o enlaces de interés.</p>
+		</aside>
+
+		<!-- <footer>: Pie de página -->
+		<footer class="footer">
+			<p>&copy; 2025 - Todos los derechos reservados.</p>
+			<p>Contacto: <a href="mailto:info@midominio.com">info@midominio.com</a></p>
+		</footer>
+
+		<!-- 
+			En este ejemplo el navegador y Google pueden "entender" la estructura:
+			- Dónde empieza la cabecera.
+			- Qué parte es el contenido principal.
+			- Qué partes son complementarias (aside).
+			- Dónde está el pie de página.
+		-->
+
+
+		<!-- ====================================================== -->
+		<!-- 5CONCLUSIÓN                                          -->
+		<!-- ====================================================== -->
+		<!-- 
+			✅ Usar etiquetas semánticas no cambia el aspecto visual (eso lo hace CSS), pero sí cambia cómo los navegadores y motores de búsqueda interpretan el contenido.
+			✅ Mejora el SEO (Google entiende mejor las secciones y jerarquía del sitio).
+			✅ Mejora la accesibilidad (los lectores de pantalla reconocen las secciones correctamente).
+			✅ Hace el código más limpio, mantenible y profesional.
+			👉 Una buena maquetación semántica es el primer paso para escribir HTML de calidad.
+		-->
+
+	</body>
+</html>

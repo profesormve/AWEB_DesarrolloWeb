@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iframe</title>
+  </head>
+  <body>
+    <!-- Atributos:
+			- src - Indica la dirección absoluta de donde cargara el documento
+			- title - Indica un titulo del documento que se va a cargar
+			- width - Indica el ancho del recuadro
+			- height - Indica el alto del recuadro
+			- frameborder="0" - Indica que no queremos borde sobre el recuadro
+		-->
+
+    <iframe
+      src="https://www.desarrolloweb.io"
+      title="Cursos de desarrollo web"
+      width="500"
+      height="500"
+      frameborder="0"
+    ></iframe>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/sXMJjLky9pY?si=UJaLIYo5fkOUMV2g"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/FxTbzh7R3iE?si=dyQhXmfv-6O7pdfg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Etiqueta iframe</title>
+	</head>
+
+	<body>
+		<!-- 
+			📘 TEMA: ETIQUETA <iframe> EN HTML
+
+			Un <iframe> (Inline Frame) permite **incrustar** dentro de una página web 
+			el contenido de otra página o recurso externo.
+
+			👉 Es como una “ventana” dentro de la web actual que muestra otro documento HTML,
+			un vídeo, un mapa, un formulario, etc.
+
+			Ejemplos típicos:
+			- Incluir un vídeo de YouTube
+			- Insertar un mapa de Google Maps
+			- Mostrar otra web o parte de ella
+		-->
+
+		<!-- ====================================================== -->
+		<!-- 1️⃣ ATRIBUTOS PRINCIPALES DE <iframe>                  -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			🔹 src
+				Define la URL del documento o recurso que se mostrará dentro del iframe.
+				Puede ser una dirección absoluta (https://...) o relativa (/carpeta/pagina.html).
+
+			🔹 title
+				Título descriptivo del contenido del iframe. 
+				Es importante para la accesibilidad (lectores de pantalla).
+
+			🔹 width
+				Ancho del iframe (en píxeles o porcentaje).
+
+			🔹 height
+				Alto del iframe (en píxeles o porcentaje).
+
+			🔹 frameborder
+				Define si el borde del iframe es visible.
+				- "1" → muestra borde
+				- "0" → sin borde (actualmente obsoleto, se recomienda usar CSS en su lugar)
+
+			🔹 allowfullscreen
+				Permite que el iframe pueda mostrarse a pantalla completa (por ejemplo, en vídeos).
+
+			🔹 allow
+				Indica qué permisos o funcionalidades puede usar el iframe:
+				(acelerómetro, micrófono, reproducción automática, etc.).
+
+			🔹 referrerpolicy
+				Controla qué información de referencia se envía al sitio embebido.
+				Se usa por motivos de privacidad y seguridad.
+		-->
+
+		<!-- ====================================================== -->
+		<!-- 2️⃣ EJEMPLO BÁSICO: CARGAR OTRA PÁGINA WEB             -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			En este ejemplo, se carga una web externa dentro de nuestra página.
+			El iframe actúa como una “mini ventana” que muestra ese sitio dentro del nuestro.
+			⚠️ Algunos sitios pueden impedir que se carguen en iframes por motivos de seguridad (cabeceras X-Frame-Options).
+		-->
+		<iframe
+			src="https://ieschandomonte.edu.es/ies/"
+			title="Pagina chan do monte"
+			width="500"
+			height="500"
+			frameborder="0"
+		></iframe>
+
+		<!-- ====================================================== -->
+		<!-- 3️⃣ EJEMPLO CON VÍDEO DE YOUTUBE                       -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			YouTube y otras plataformas ofrecen directamente un código <iframe> para insertar vídeos en otras webs.
+			Este iframe carga un vídeo mediante la URL especial “https://www.youtube.com/embed/...”
+		-->
+		<iframe
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/sXMJjLky9pY?si=UJaLIYo5fkOUMV2g"
+			title="Reproductor de video de YouTube"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen
+		></iframe>
+
+					<!-- 
+				El atributo allow define permisos que el iframe puede usar.
+				Por ejemplo:
+					- accelerometer: usar el sensor de movimiento.
+					- autoplay: permitir que el vídeo se reproduzca automáticamente.
+					- clipboard-write: permitir copiar/pegar.
+					- encrypted-media: reproducir contenido cifrado (DRM).
+					- gyroscope: usar el sensor de orientación.
+					- picture-in-picture: mostrar el vídeo flotando sobre otras ventanas.
+					- web-share: permitir compartir contenido desde el vídeo.
+			-->
+					<!-- Política de privacidad: controla qué información del usuario se envía al servidor -->
+					 <!-- Permite ver el vídeo a pantalla completa -->
+
+		<!-- ====================================================== -->
+		<!-- 4️⃣ BUENAS PRÁCTICAS                                   -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			✅ Usa siempre el atributo "title" → mejora la accesibilidad.
+			✅ Controla el tamaño del iframe con width/height o CSS (por ejemplo: width:100%; height:400px;).
+			✅ Si insertas contenido externo, comprueba que sea seguro y confiable.
+			✅ No abuses de los iframes: cada uno carga una página completa dentro de otra,
+			   lo que puede afectar al rendimiento.
+			✅ Si necesitas aislar el contenido por seguridad, puedes usar el atributo “sandbox”.
+		-->
+
+		<!-- ====================================================== -->
+		<!-- 5️⃣ ATRIBUTO SANDBOX (AVANZADO)                        -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			El atributo sandbox restringe las acciones que puede hacer el contenido del iframe.
+			Por defecto, bloquea todo, pero se pueden habilitar permisos concretos.
+
+			Ejemplo:
+				<iframe src="ejemplo.html" sandbox></iframe>
+				→ El iframe no puede ejecutar scripts, enviar formularios ni abrir ventanas.
+
+			Permisos posibles:
+				- allow-scripts → permite ejecutar scripts.
+				- allow-forms → permite enviar formularios.
+				- allow-same-origin → permite compartir cookies/datos de sesión.
+				- allow-popups → permite abrir nuevas ventanas.
+		-->
+
+		<!-- ====================================================== -->
+		<!-- 6️⃣ CONCLUSIÓN                                          -->
+		<!-- ====================================================== -->
+
+		<!-- 
+			✅ El elemento <iframe> es una herramienta muy útil para integrar contenido externo 
+			   (vídeos, mapas, documentos, etc.) dentro de nuestras páginas.
+
+			✅ Sin embargo, debe usarse con cuidado por motivos de rendimiento y seguridad.
+
+			✅ En proyectos modernos, se prefiere usar APIs o componentes embebidos de forma más controlada,
+			   pero <iframe> sigue siendo una opción rápida y sencilla para mostrar contenido externo.
+		-->
+	</body>
+</html>
