@@ -1,68 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iframe</title>
-  </head>
-  <body>
-    <!-- Atributos:
-			- src - Indica la dirección absoluta de donde cargara el documento
-			- title - Indica un titulo del documento que se va a cargar
-			- width - Indica el ancho del recuadro
-			- height - Indica el alto del recuadro
-			- frameborder="0" - Indica que no queremos borde sobre el recuadro
-		-->
-
-    <iframe
-      src="https://www.desarrolloweb.io"
-      title="Cursos de desarrollo web"
-      width="500"
-      height="500"
-      frameborder="0"
-    ></iframe>
-
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/sXMJjLky9pY?si=UJaLIYo5fkOUMV2g"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/FxTbzh7R3iE?si=dyQhXmfv-6O7pdfg"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -123,10 +60,12 @@
 			El iframe actúa como una “mini ventana” que muestra ese sitio dentro del nuestro.
 			⚠️ Algunos sitios pueden impedir que se carguen en iframes por motivos de seguridad (cabeceras X-Frame-Options).
 		-->
+		<h1>IFRAME </h1>
+		<h2>CARGAR OTRA PÁGINA WEB</h2>
 		<iframe
 			src="https://ieschandomonte.edu.es/ies/"
 			title="Pagina chan do monte"
-			width="500"
+			width="100%"
 			height="500"
 			frameborder="0"
 		></iframe>
@@ -139,16 +78,17 @@
 			YouTube y otras plataformas ofrecen directamente un código <iframe> para insertar vídeos en otras webs.
 			Este iframe carga un vídeo mediante la URL especial “https://www.youtube.com/embed/...”
 		-->
-		<iframe
-			width="560"
-			height="315"
-			src="https://www.youtube.com/embed/sXMJjLky9pY?si=UJaLIYo5fkOUMV2g"
-			title="Reproductor de video de YouTube"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin"
-			allowfullscreen
-		></iframe>
+		<h2>CARGAR VÍDEO DE YOUTUBE</h2>
+		<iframe 
+			width="560" 
+			height="315" 
+			src="https://www.youtube.com/embed/FxTbzh7R3iE?si=JtXFjYnLiex-RWWZ" 
+			title="YouTube video player" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+			referrerpolicy="strict-origin-when-cross-origin" 
+			allowfullscreen>
+		</iframe>
 
 					<!-- 
 				El atributo allow define permisos que el iframe puede usar.
