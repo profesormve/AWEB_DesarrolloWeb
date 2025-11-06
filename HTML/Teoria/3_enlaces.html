@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Enlaces en HTML</title>
+	</head>
+	<body>
+		<!-- ===============================================    -->
+		<!--	ETIQUETA <a> – ENLACES O HIPERVÍNCULOS         -->
+		<!--	=============================================== 
+			La etiqueta <a> (anchor) permite crear enlaces o hipervínculos
+			en una página web.
+
+			📌 Sirve para conectar una página con:
+				- Otra página web (externa o interna)
+				- Un archivo local
+				- Un correo electrónico o número de teléfono
+				- Un punto específico dentro de la misma página
+
+			📌 Sintaxis básica:
+				<a href="URL">Texto visible del enlace</a>
+
+			📌 Atributos comunes:
+				- href → dirección o recurso al que se dirige el enlace
+				- title → texto informativo que aparece al pasar el cursor
+				- target → define cómo se abre el enlace (_blank, _self, etc.)
+				- download → fuerza la descarga de un archivo
+		-->
+
+		<h1>Enlaces en HTML</h1>
+
+		<!-- =============================================== -->
+		<!-- ENLACES EXTERNOS                               -->
+		<!-- =============================================== 
+			Los enlaces externos apuntan a páginas o sitios fuera 
+			del dominio actual.
+		-->
+		<h2>Enlaces externos</h2>
+
+		<!-- Ejemplo con título (muestra un tooltip al pasar el ratón) -->
+		<a href="https://ieschandomonte.edu.es/ies" title="Ir a la web del centro IES Chan do Monte">
+			IES Chan do Monte
+		</a>
+		<br />
+
+		<!-- Atributo target="_blank" abre el enlace en una pestaña nueva -->
+		<a href="https://www.google.com" target="_blank" title="Abrir Google en una nueva pestaña">
+			Ir a Google
+		</a>
+
+		<hr />
+
+		<!-- =============================================== -->
+		<!-- ENLACES INTERNOS                               -->
+		<!-- =============================================== 
+			Los enlaces internos apuntan a páginas o archivos 
+			dentro del mismo sitio web o proyecto.
+
+			Pueden escribirse con:
+			- Rutas relativas (desde el archivo actual)
+			- Rutas absolutas (desde la raíz del sistema o servidor)
+		-->
+
+		<h2>Enlaces internos – Recursos locales</h2>
+
+		<!-- RUTAS RELATIVAS -->
+		<h3>Rutas relativas</h3>
+
+		<!-- Ruta relativa (misma carpeta) -->
+		<a href="2_etiquetasDeTexto.html">Ir a 2_etiquetasDeTexto.html</a>
+		<br />
+
+		<!-- Ruta relativa con ./ para indicar el directorio actual -->
+		<a href="./1_parrafos_y_encabezados.html">Ir a 1_parrafos_y_encabezados.html</a>
+		<br />
+
+		<!-- RUTAS ABSOLUTAS -->
+		<h3>Rutas absolutas</h3>
+
+		<!-- Ruta absoluta: comienza desde la raíz del sistema o servidor -->
+		<a href="/home/mvazquez/GIT/profesor.mve/AWEB/AWEB_DesarrolloWeb/HTML/Teoria/2_etiquetasDeTexto.html">
+			Ir a 2_etiquetasDeTexto.html (ruta absoluta)
+		</a>
+
+		<hr />
+
+		<!-- =============================================== -->
+		<!-- ENLACES ESPECIALES                             -->
+		<!-- =============================================== 
+			Los enlaces especiales se utilizan para abrir correos,
+			llamar por teléfono o descargar archivos directamente.
+		-->
+		<h2>Enlaces especiales</h2>
+
+		<!-- Enlace a un documento PDF alojado en la web -->
+		<a
+			href="https://centros.edu.xunta.gal/ieschanmonte/aulavirtual/pluginfile.php/157507/mod_resource/content/1/Tabla%20de%20enlaces%20especiales%20HTML.pdf"
+			title="Abrir listado de enlaces especiales HTML"
+			target="_blank"
+		>
+			Listado completo (PDF)
+		</a>
+		<br /><br />
+
+		<!-- Enlace que abre el cliente de correo predeterminado -->
+		<a href="mailto:info@ejemplo.com" title="Enviar correo electrónico">
+			Contactar por correo
+		</a>
+		<br />
+
+		<!-- Enlace que abre una llamada telefónica (en móvil) -->
+		<a href="tel:+34986123456" title="Llamar por teléfono">
+			Llamar al centro (+34 986 123 456)
+		</a>
+		<br />
+
+		<!-- Enlace que descarga directamente un archivo -->
+		<a href="media/manual.pdf" download="manual_del_usuario.pdf" title="Descargar manual en PDF">
+			Descargar manual del usuario
+		</a>
+
+		<hr />
+
+		<!-- =============================================== -->
+		<!-- ENLACES INTERNOS A SECCIONES DE LA MISMA PÁGINA -->
+		<!-- =============================================== 
+			Los identificadores (#id) permiten saltar a una parte específica
+			de la misma página (anclas internas).
+			
+			#top funciona automáticamente en la mayoría de navegadores porque apunta al <html> o <body>
+		-->
+
+		<h2 id="inicio">Enlaces a secciones internas</h2>
+		<a href="#final">Ir al final de la página</a>
+
+		<!-- Contenido de relleno -->
+		<h3>Contenido de relleno</h3>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, libero exercitationem illo nesciunt dolorem sint, eius nihil tenetur ullam, ut ab labore. Enim odit necessitatibus repellat, iure laborum beatae. Quas?</p>
+
+
+		<!-- Marcador de destino -->
+		<h3 id="final">Aquí termina la página 👋</h3>
+		<hr>
+		<a href="#inicio">Volver al inicio del contenido de relleno</a>
+		<br>
+		<a href="#top">Volver al inicio de todo</a>
+		<hr>
+
+		<!-- =============================================== -->
+		<!--	RESUMEN DE TIPOS DE ENLACES EN HTML            -->
+		<!-- ===============================================
+			Tipo de enlace		Ejemplo / atributo			Descripción
+			----------------------------------------------------------------
+			Externo				<a href="https://...">		Apunta fuera del sitio web
+			Interno				<a href="pagina.html">		Archivo del mismo sitio
+			
+			Existe varios enlaces especiales (ver .pdf)
+			Correo				<a href="mailto:...">		Abre cliente de correo
+			Teléfono			<a href="tel:+...">			Llama (móviles)
+			Descarga			<a href="archivo.pdf" download>Descarga archivo
+			
+			Apuntar a una posición concreta dentro de la página actual.
+			Ancla interna		<a href="#id">				Salta a una parte del documento
+
+			✅ Buenas prácticas:
+			- Incluir siempre un texto descriptivo dentro del enlace.
+			- Usar "title" para añadir información contextual.
+			- Evitar usar solo “haz clic aquí”.
+			- Abrir enlaces externos en nueva pestaña (target="_blank").
+		-->
+	</body>
+</html>

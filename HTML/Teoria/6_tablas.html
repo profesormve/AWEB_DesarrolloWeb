@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tablas en HTML</title>
+	</head>
+	<body>
+		<!-- ===============================================    -->
+		<!--	ETIQUETA <table>                                  -->
+		<!--	=============================================== 
+			La etiqueta <table> se utiliza para representar datos 
+			en forma de tabla (filas y columnas).
+
+			📌 Cada tabla está compuesta por:
+				- Filas (<tr>)
+				- Celdas (<td> o <th>)
+				- Secciones opcionales: <thead>, <tbody> y <tfoot>
+			
+			📌 No se recomienda usar tablas para maquetar páginas web.
+				Su uso debe limitarse a mostrar información tabular.
+		-->
+
+		<table border="1">
+			<!-- 
+				Atributo “border” (solo para demostración):
+				Muestra un borde visible en la tabla.
+				En diseño moderno, se usa CSS (no HTML) para esto.
+			-->
+
+			<!-- =============================================== -->
+			<!--	ETIQUETA <thead> – ENCABEZADO DE TABLA         -->
+			<!-- =============================================== 
+				Contiene los títulos de las columnas (cabecera).
+				Se utiliza la etiqueta <th> (table heading).
+
+				📌 Los encabezados (<th>) se muestran en negrita 
+				y centrados por defecto.
+				📌 También aportan significado semántico, 
+				mejorando la accesibilidad y lectura por lectores de pantalla.
+			-->
+
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Teléfono</th>
+					<th>Dirección</th>
+				</tr>
+			</thead>
+
+			<!-- =============================================== -->
+			<!--	ETIQUETA <tbody> – CUERPO DE TABLA            -->
+			<!-- =============================================== 
+				Contiene los datos principales de la tabla.
+				Cada fila (<tr>) representa un registro.
+				Cada celda de datos se define con <td> (table data).
+			-->
+
+			<tbody>
+				<tr>
+					<td>Carlos Arturo</td>
+					<td>123456</td>
+					<td>Lorem ipsum dolor.</td>
+				</tr>
+				<tr>
+					<td>César</td>
+					<td>8597123</td>
+					<td>Lorem ipsum dolor sit amet.</td>
+				</tr>
+				<tr>
+					<td>María López</td>
+					<td>654321</td>
+					<td>Calle Mayor, 27</td>
+				</tr>
+			</tbody>
+
+			<!-- =============================================== -->
+			<!--	ETIQUETA <tfoot> – PIE DE TABLA               -->
+			<!-- =============================================== 
+				Define el pie de la tabla. Se usa normalmente para:
+				- Totales o promedios.
+				- Notas aclaratorias.
+				- Información complementaria al final de la tabla.
+
+				📌 Aunque se coloque al final en el HTML, los navegadores
+				lo muestran correctamente debajo del cuerpo.
+			-->
+
+			<tfoot>
+				<tr>
+					<td colspan="3">Total de registros: 3</td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<!-- =============================================== -->
+		<!--	EJEMPLO VISUAL DE TABLA CON ESTILOS CSS         -->
+		<!-- =============================================== 
+			Los estilos visuales (bordes, colores, espaciado)
+			se controlan con CSS, no con atributos HTML.
+		-->
+		<style>
+			table {
+				border-collapse: collapse; /* Bordes combinados */
+				width: 60%;
+				margin-top: 20px;
+			}
+			th, td {
+				border: 1px solid #888;
+				padding: 8px;
+				text-align: left;
+			}
+			thead {
+				background-color: #f2f2f2;
+			}
+			tfoot {
+				background-color: #e8e8e8;
+				font-weight: bold;
+				text-align: center;
+			}
+		</style>
+
+		<!-- =============================================== -->
+		<!--	RESUMEN DE ETIQUETAS DE TABLAS EN HTML         -->
+		<!-- ===============================================
+
+			Etiqueta	Significado				Uso principal
+			---------------------------------------------------------
+			<table>		Tabla completa			Contenedor general
+			<tr>		Table row				Fila de la tabla
+			<th>		Table heading			Celda de encabezado (columna)
+			<td>		Table data				Celda de datos
+			<thead>		Table head				Sección del encabezado
+			<tbody>		Table body				Cuerpo principal
+			<tfoot>		Table foot				Pie o resumen final
+
+			✅ Buenas prácticas:
+			- Usar <thead>, <tbody> y <tfoot> para tablas grandes.
+			- Aplicar estilos con CSS, no con atributos antiguos (border, align...).
+			- Evitar usar tablas para maquetar layouts (solo datos).
+			- Añadir títulos de columnas claros y consistentes.
+		-->
+	</body>
+</html>

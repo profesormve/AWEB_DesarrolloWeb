@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Imágenes en HTML</title>
+	</head>
+	<body>
+		<!-- =============================================== -->
+		<!--	ETIQUETA <img> – INSERCIÓN DE IMÁGENES         -->
+		<!-- =============================================== 
+			La etiqueta <img> permite mostrar imágenes dentro
+			de una página web.
+
+			📌 Es una etiqueta *vacía*: no tiene cierre </img>.
+			📌 El contenido visual proviene del atributo "src".
+
+			📌 Sintaxis básica:
+				<img src="ruta/imagen.jpg" alt="Descripción de la imagen" />
+
+			📌 Atributos más comunes:
+				- src → ruta o URL de la imagen
+				- alt → texto alternativo (accesibilidad, SEO)
+				- title → texto emergente al pasar el ratón
+				- width / height → dimensiones de la imagen (en píxeles o %)
+				- loading="lazy" → carga diferida (HTML5)
+		-->
+
+		<h1>Imágenes en HTML</h1>
+
+		<!-- =============================================== -->
+		<!-- EJEMPLO 1: IMAGEN LOCAL                        -->
+		<!-- =============================================== -->
+
+		<!-- 
+			📷 Esta imagen se carga desde una carpeta del propio proyecto.
+			El atributo "alt" describe su contenido (obligatorio para accesibilidad).
+			El atributo "title" muestra un texto informativo al pasar el cursor.
+		-->
+		<img
+			src="imagenes/paisaje1.jpg"
+			width="350"
+			title="Montañas nevadas"
+			alt="Imagen de montañas nevadas"
+		/>
+
+		<!-- =============================================== -->
+		<!-- EJEMPLO 2: IMAGEN EXTERNA ENLAZADA             -->
+		<!-- =============================================== -->
+
+		<!-- 
+			📎 Aquí la imagen proviene de una URL externa (Unsplash)
+			y está envuelta por un enlace <a>.
+			Al hacer clic sobre la imagen, se abre la fuente original.
+		-->
+		<a href="https://unsplash.com/es/fotos/un-coche-conduciendo-por-una-carretera-en-el-bosque-7meutoti8Vw" target="_blank">
+			<img
+				src="https://images.unsplash.com/photo-1727162334294-170987f6b31b?q=80&w=800&auto=format&fit=crop"
+				alt="Coche conduciendo por una carretera en el bosque"
+				width="350"
+				title="Ver imagen original en Unsplash"
+			/>
+		</a>
+
+		<!-- =============================================== -->
+		<!-- FORMAS DE REFERENCIAR IMÁGENES                 -->
+		<!-- =============================================== 
+			📁 RUTAS RELATIVAS:
+				- Desde la misma carpeta o subcarpetas del proyecto.
+				- Ejemplo: src="imagenes/foto.jpg"
+
+			🌐 RUTAS ABSOLUTAS:
+				- URL completa hacia una imagen alojada en internet.
+				- Ejemplo: src="https://example.com/foto.jpg"
+		-->
+
+		<!-- =============================================== -->
+		<!-- ATRIBUTOS ADICIONALES ÚTILES                   -->
+		<!-- =============================================== 
+			loading="lazy" → retrasa la carga de la imagen hasta que
+			el usuario se acerque visualmente a ella (mejora rendimiento).
+
+			style → permite aplicar estilos CSS en línea (aunque se recomienda CSS externo).
+		-->
+
+		<img
+			src="imagenes/paisaje2.jpg"
+			width="350"
+			alt="Paisaje con lago"
+			title="Paisaje con lago (carga diferida)"
+			loading="lazy"
+			style="display:block; margin-top:20px;"
+		/>
+
+		<!-- =============================================== -->
+		<!-- BUENAS PRÁCTICAS                               -->
+		<!-- =============================================== 
+			✅ Siempre usar el atributo "alt" con una descripción clara.
+			✅ Ajustar las dimensiones para optimizar la carga.
+			✅ Usar "loading='lazy'" para mejorar rendimiento.
+			✅ Evitar imágenes demasiado pesadas o sin compresión.
+			✅ Si la imagen es clicable, envolverla en un enlace <a>.
+			✅ Usar formatos modernos (WEBP o AVIF) si el navegador los soporta.
+		-->
+
+		<!-- =============================================== -->
+		<!-- TABLA RESUMEN DE ATRIBUTOS DE <img>            -->
+		<!-- ===============================================
+
+			Atributo		Descripción							Ejemplo
+			-------------------------------------------------------------------
+			src				Origen de la imagen					src="foto.jpg"
+			alt				Texto alternativo					alt="Descripción"
+			title			Texto informativo al pasar el ratón	title="Info extra"
+			width/height	Dimensiones de la imagen				width="300"
+			loading			Carga diferida ("lazy")				loading="lazy"
+			style			Estilos en línea (no recomendado)	style="border:1px solid"
+
+			📌 Formatos comunes:
+			- JPG / JPEG → fotos o paisajes (buena compresión)
+			- PNG → imágenes con transparencia
+			- GIF → animaciones simples
+			- WEBP → formato moderno, más ligero
+		-->
+	</body>
+</html>

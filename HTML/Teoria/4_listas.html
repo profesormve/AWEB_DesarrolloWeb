@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Listas en HTML</title>
+	</head>
+	<body>
+		<!-- =============================================== -->
+		<!-- LISTAS EN HTML                                  -->
+		<!-- =============================================== 
+			HTML ofrece varias formas de representar información
+			en formato de lista. Existen tres tipos principales:
+
+			📌 <ul> → Lista desordenada (bullets o viñetas)
+			📌 <ol> → Lista ordenada (numeración)
+			📌 <dl> → Lista de definiciones (pares término–descripción)
+
+			📌 Las listas se componen de:
+				- <li> → List item (ítem de la lista) → para <ul> y <ol>
+				- <dt> → Definition term → para <dl>
+				- <dd> → Definition description → para <dl>
+		-->
+
+		<!-- =============================================== -->
+		<!-- LISTA DESORDENADA                               -->
+		<!-- =============================================== -->
+		<h3>Lista desordenada</h3>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ul>
+
+		<!-- 
+			<ul> crea una lista con viñetas por defecto.
+			Ideal para enumerar elementos sin un orden específico.
+		-->
+
+		<!-- =============================================== -->
+		<!-- LISTA ORDENADA                                  -->
+		<!-- =============================================== -->
+		<h3>Lista ordenada</h3>
+		<ol start="10">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ol>
+
+		<!-- 
+			<ol> genera una lista numerada.
+			- El atributo "start" permite elegir el número inicial.
+			- También puedes usar type="A" / "a" / "I" / "i" para cambiar el estilo.
+
+			Ejemplos:
+				<ol type="A"> → A, B, C
+				<ol type="i"> → i, ii, iii
+		-->
+
+		<!-- =============================================== -->
+		<!-- LISTA DE DEFINICIONES                           -->
+		<!-- =============================================== -->
+		<h3>Lista con descripciones</h3>
+		<dl>
+			<dt>Término 1</dt>
+			<dd>Descripción del término 1</dd>
+
+			<dt>Término 2</dt>
+			<dd>Descripción del término 2</dd>
+		</dl>
+
+		<!-- 
+			<dl> define una lista de definiciones.
+			<dt> representa el término.
+			<dd> representa su descripción o definición.
+			Ideal para glosarios, FAQ o diccionarios.
+		-->
+
+		<!-- =============================================== -->
+		<!-- LISTA ANIDADA                                   -->
+		<!-- =============================================== -->
+		<h3>Lista Anidada</h3>
+		<ol>
+			<li>HTML</li>
+			<li>
+				CSS
+				<ul>
+					<li>Responsive Design</li>
+					<li>Flexbox</li>
+					<li>CSS Grid</li>
+				</ul>
+			</li>
+			<li>JavaScript</li>
+		</ol>
+
+		<!-- 
+			Puedes anidar listas dentro de otras listas.
+			En este ejemplo, dentro de una <li> de una <ol>,
+			se incluye una <ul> secundaria con temas de CSS.
+		-->
+
+		<!-- =============================================== -->
+		<!-- LISTA COMO MENÚ DE NAVEGACIÓN                  -->
+		<!-- =============================================== -->
+		<h3>Menú de Navegación</h3>
+		<ul>
+			<li><a href="1_parrafos_y_encabezados.html">1_parrafos_y_encabezados</a></li>
+			<li><a href="2_etiquetasDeTexto.html">2_etiquetasDeTexto</a></li>
+			<li><a href="3_enlaces.html">3_enlaces</a></li>
+			<li><a href="#">Otros: Vacío</a></li>
+		</ul>
+
+		<!-- 
+			Las listas desordenadas <ul> son muy utilizadas para crear
+			menús de navegación en sitios web.
+
+			Cada <li> contiene un enlace <a>. Posteriormente se pueden
+			estilizar con CSS para mostrar en horizontal, ocultar submenús, etc.
+		-->
+
+		<!-- =============================================== -->
+		<!-- RESUMEN: TIPOS DE LISTAS EN HTML               -->
+		<!-- ===============================================
+
+			Etiqueta	Tipo de lista	    Elementos internos		Ejemplo de uso
+			---------------------------------------------------------------
+			<ul>		Desordenada		    <li>					Viñetas
+			<ol>		Ordenada			<li>					Listas numeradas
+			<dl>		Definiciones		<dt> y <dd>			Glosarios o FAQ
+
+			Atributos útiles:
+			- <ol start="N"> → comienza desde N
+			- <ol type="A">  → cambia estilo: A, a, I, i
+			- <li value="N"> → valor personalizado (en <ol>)
+
+			✅ Buenas prácticas:
+			- Usar listas para estructurar contenido lógico.
+			- Anidar listas cuando la jerarquía lo necesite.
+			- Para menús de navegación, combinar <ul> con <a>.
+			- Estilizar con CSS, no con atributos antiguos.
+		-->
+	</body>
+</html>
+
