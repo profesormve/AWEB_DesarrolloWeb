@@ -1,0 +1,153 @@
+/* ============================================================= */
+/*  GRADIENTES EN CSS                                            */
+/* =============================================================
+   Los gradientes permiten crear transiciones suaves entre colores,  sin necesidad de usar imágenes externas.
+
+   Tipos principales:
+     - linear-gradient() → gradiente lineal (horizontal, vertical o diagonal)
+     - radial-gradient() → gradiente radial (circular o elíptico)
+     - conic-gradient()  → gradiente cónico (como un abanico o rueda)
+
+   Recursos para crear y copiar gradientes:
+     🔗 https://uigradients.com/
+     🔗 https://cssgradient.io/
+
+   Recomendación:
+     Usar gradientes modernos directamente con background: linear-gradient(...)
+     ya que hoy en día tienen compatibilidad completa en navegadores actuales.
+*/
+
+/* ============================================================= */
+/*  CAJA BASE                                                    */
+/* ============================================================= */
+.caja {
+	width: 500px;
+	height: 500px;
+	background: #000; /* Color de fondo por defecto */
+	margin: 10px;
+	border: 2px solid #333;
+}
+
+/* ============================================================= */
+/*  GRADIENTE LINEAL                                             */
+/* =============================================================
+   Un gradiente lineal se genera a lo largo de una línea (recta o diagonal).
+
+   Sintaxis general:
+     background: linear-gradient(dirección, color1, color2, ...);
+
+   📌 DIRECCIONES:
+     ▪ Direcciones básicas:
+        to top → de abajo hacia arriba
+        to right → de izquierda a derecha
+        to bottom → de arriba hacia abajo (por defecto)
+        to left → de derecha a izquierda
+
+     ▪ Direcciones diagonales:
+        to top left → de abajo-derecha hacia arriba-izquierda
+        to top right → de abajo-izquierda hacia arriba-derecha
+        to bottom left → de arriba-derecha hacia abajo-izquierda
+        to bottom right → de arriba-izquierda hacia abajo-derecha
+
+     ▪ Direcciones angulares (sin “to”):
+        45deg → hacia 45 grados
+        180deg → hacia abajo
+        270deg → hacia la izquierda
+
+    Compatibilidad:
+     - Ya no es necesario usar prefijos (-webkit-) en navegadores modernos.
+*/
+
+.gradiente-linear {
+	/* Color de respaldo (fallback) por si el navegador no soporta gradientes */
+	background: #c31432;
+	/* Gradiente lineal con dirección y dos colores */
+	background: linear-gradient(
+		to bottom left,       /* Dirección en grados */
+		#240b36,     /* Color inicial */
+		#c31432      /* Color final */
+	);
+}
+
+/* ============================================================= */
+/*  GRADIENTE RADIAL                                             */
+/* =============================================================
+   Un gradiente radial parte de un punto central y se expande hacia fuera.
+
+   	Sintaxis general:
+     background: radial-gradient(forma tamaño at posición, color1, color2, ...);
+
+	FORMAS:
+     - circle (por defecto)
+     - ellipse
+
+   	POSICIÓN:
+     - center (por defecto)
+     - top, bottom, left, right o combinaciones (ej: top right)
+
+   Ejemplo: radial-gradient(circle at center, red, blue)
+*/
+
+.gradiente-radial {
+	background: radial-gradient(
+		circle at center, 	/* forma y posición */
+		lime,             /* color central */
+		black             /* color exterior */
+	);
+}
+
+/* ============================================================= */
+/*  GRADIENTE CÓNICO                                             */
+/* =============================================================
+   El gradiente cónico gira alrededor de un punto (como una rueda de color).
+
+   Sintaxis general:
+     background: conic-gradient(desde ángulo at posición, color1, color2, ...);
+
+   Ejemplo:
+     conic-gradient(from 90deg, red, yellow, green, blue, red);
+*/
+
+.gradiente-conico {
+	background: conic-gradient(
+		from 60deg,   /* punto inicial del giro */
+		yellow,      /* inicio */
+		orangered,   /* intermedio */
+		yellow       /* vuelve al inicio para cerrar el círculo */
+	);
+}
+
+/* ============================================================= */
+/*  COMBINACIÓN DE GRADIENTE + IMAGEN                           */
+/* =============================================================
+   Se pueden superponer varias capas de fondo separadas por comas.
+
+   En este ejemplo:
+     - La primera capa es un gradiente semitransparente.
+     - La segunda capa es una imagen.
+
+   Sintaxis:
+     background: 
+       linear-gradient(...),
+       url("imagen.jpg");
+
+	Orden:
+     La primera capa (gradiente) queda por encima de la siguiente (imagen).
+*/
+
+.gradiente-imagen {
+	background:
+		/* Capa 1: gradiente semitransparente que oscurece la parte inferior */
+		linear-gradient(
+			to bottom, 
+			rgba(255, 255, 255, 0),  /* transparente arriba */
+			rgba(0, 0, 0, 1)         /* negro opaco abajo */
+		),
+		/* Capa 2: imagen de fondo */
+		url('./imagenes/bosque.png');
+
+	/* Ajustes comunes de fondo */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,49 @@
+/* ========================================================== */
+/* ESTILOS PARA LA CAJA                                       */
+/* ========================================================== */
+
+.caja {
+  background: #61b387;       /* Color de fondo */
+  width: 300px;              /* Ancho de la caja */
+  /* height: 300px; */       /* Altura opcional */
+
+  /* Padding: espacio interno (entre contenido y borde) */
+  /* padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 10px; */
+
+  /* También puedes usar: */
+  padding: 30px;             			/* 30px en todos los lados */
+  /* padding: 10px 20px; */  			/* vertical | horizontal */
+  /* padding: 10px 20px 30px 40px; */ 	/* top, right, bottom, left */
+
+  margin: 50px;              /* Margen externo (espacio fuera de la caja) */
+
+  border: 10px solid #000;   /* Borde: grosor, estilo y color */
+}
+
+/* ========================================================== */
+/* ESTILOS PARA LA IMAGEN                                     */
+/* ========================================================== */
+
+.imagen {
+  width: 400px;
+  border: 5px solid #000;    /* Borde negro */
+  padding: 20px;             /* Relleno interno */
+  margin: 0px 100px;         /* 0 arriba/abajo, 100px izquierda/derecha */
+}
+
+/* ========================================================== */
+/* UNIDADES MÁS USADAS EN CSS                                 */
+/* ========================================================== */
+/*
+  - px     → píxeles (unidad fija)
+  - %      → porcentaje del contenedor padre
+  - em     → relativo al tamaño de fuente del elemento padre
+  - rem    → relativo al tamaño de fuente del elemento raíz (html)
+
+  ✅ Tip para ajustar los valores de la caja:
+  Puedes probar y cambiar estos valores desde las herramientas del navegador,
+  aunque los cambios solo serán temporales (no se guardan).
+*/

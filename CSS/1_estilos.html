@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mis primeros estilos CSS</title>
+
+		<!-- =============================================== -->
+		<!--	FORMAS DE APLICAR ESTILOS CSS EN HTML         -->
+		<!-- =============================================== 
+			Existen tres formas principales de aplicar estilos CSS:
+
+			✅ Forma 1 – En línea (inline): 
+				- Se usa directamente dentro del atributo style en una etiqueta HTML.
+				- Es útil para pruebas rápidas o estilos muy puntuales.
+				- ❌ No es recomendable para proyectos grandes: poco mantenible.
+
+			✅ Forma 2 – Interna (bloque <style> en el <head>): 
+				- Permite escribir varias reglas CSS dentro del propio archivo HTML.
+				- Buena para páginas simples o demostraciones.
+
+			✅ Forma 3 – Externa (archivo .css enlazado):
+				- Es la forma recomendada para proyectos reales.
+				- Mantiene separado el contenido (HTML) del diseño (CSS).
+				- Permite reutilizar los estilos en muchas páginas.
+		-->
+
+		<!-- =============================================== -->
+		<!-- FORMA #2: CSS INTERNO EN BLOQUE <style>        -->
+		<!-- =============================================== -->
+		<!-- 
+			Esta forma permite definir reglas CSS dentro del propio documento HTML,
+			dentro del <head>. Es útil en prácticas o páginas pequeñas.
+		-->
+		<style>
+			/* Aplica color rojo al texto del cuerpo */
+			body {
+				color: red;
+			}
+			/* Aplica subrayado al primer encabezado */
+			h1 {
+				text-decoration: underline;
+			}
+		</style>
+
+		<!-- =============================================== -->
+		<!-- FORMA #3: CSS EXTERNO MEDIANTE <link>          -->
+		<!-- =============================================== -->
+		<!-- 
+			Enlaza un archivo de estilos externo (estilos.css).
+			Se recomienda esta forma en proyectos reales para separar contenido y diseño.
+		-->
+		<link rel="stylesheet" href="estilos.css" />
+	</head>
+
+	<body>
+		<!-- =============================================== -->
+		<!-- FORMA #1: CSS EN LÍNEA (INLINE)                -->
+		<!-- =============================================== -->
+
+		<!-- 
+			Estilo aplicado directamente sobre el elemento con el atributo style.
+			Aquí el color azul se aplica solo a este <h1>.
+			No se recomienda en proyectos grandes porque mezcla contenido y diseño.
+		-->
+		<h1 style="color: blue">Hola mundo con estilo en línea</h1>
+
+		<!-- Otro ejemplo con estilo en línea en un párrafo -->
+		<p style="font-weight: bold; font-size: 18px">
+			Este párrafo tiene estilos en línea aplicados directamente.
+		</p>
+
+		<!-- =============================================== -->
+		<!-- ELEMENTOS SIN ESTILO EN LÍNEA (heredan del style interno o externo) -->
+		<!-- =============================================== -->
+
+		<h1>Hola mundo con estilos internos y externos</h1>
+		<p>
+			Este texto hereda el color desde el bloque CSS interno (color rojo en body) y podría
+			también ser modificado por el CSS externo si se edita estilos.css.
+		</p>
+
+		<!-- =============================================== -->
+		<!-- RESUMEN DE FORMAS DE APLICAR CSS               -->
+		<!-- ===============================================
+
+			Forma				Ejemplo							Uso recomendado
+			------------------------------------------------------------------
+			En línea (inline)	<h1 style="color: red">			✅ Pruebas rápidas / casos puntuales
+			Interno (<style>)	<style> h1 { ... } </style>		✅ Páginas pequeñas o ejercicios
+			Externo (.css)		<link href="estilos.css">		✅ Proyectos reales / mantenimiento
+
+			✅ Recomendación:
+			- Prioriza usar CSS externo siempre que sea posible.
+			- Usa inline solo para pruebas o estilos muy específicos.
+			- Usa interno para ejemplos, prototipos o una sola página.
+		-->
+	</body>
+</html>
+

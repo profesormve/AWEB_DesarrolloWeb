@@ -1,0 +1,79 @@
+/* =============================================== */
+/* SELECTORES BÁSICOS                              */
+/* =============================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: red; /* Todos los encabezados tienen texto rojo */
+}
+
+main p {
+	font-size: 20px; /* Todos los párrafos dentro de <main> */
+}
+
+main p a {
+	font-size: 26px;
+	color: blue; /* Enlaces dentro de párrafos de <main> */
+}
+
+/* =============================================== */
+/* SELECTORES POR CLASE                            */
+/* =============================================== 
+   Se escriben con punto (.) y afectan a TODOS los elementos
+   que tengan esa clase, sin importar su tipo (a, p, div…).
+*/
+
+/* Clase común para enlaces */
+.enlace {
+	color: red;
+}
+
+/* Estilo especial solo si está dentro del header */
+header .enlace {
+	font-size: 22px;
+}
+
+/* Clase adicional para destacar enlaces */
+.especial {
+	color: darkblue;
+	/* Este estilo sobrescribe el color rojo de `.enlace` */
+}
+
+/* =============================================== */
+/* SELECTOR POR ID                                 */
+/* =============================================== 
+   Se escribe con almohadilla (#) y se aplica a UN elemento único.
+   ⚠️ No se deben repetir IDs dentro de una página.
+*/
+
+/*
+#especial {
+	color: darkblue;
+}
+*/
+
+/* En este ejemplo está comentado porque usamos la clase .especial.
+   Pero si se usara, tendría mayor prioridad por especificidad.
+*/
+
+/* =============================================== */
+/* RESUMEN EDUCATIVO                               */
+/* ===============================================
+
+| Selector        | Símbolo | Aplica a...                         | Ejemplo CSS        |
+|-----------------|---------|-------------------------------------|--------------------|
+| Etiqueta        | (nada)  | Todos los elementos de ese tipo     | p { ... }          |
+| Clase           | `.`     | Todos los elementos con esa clase   | .enlace { ... }    |
+| ID              | `#`     | Solo al elemento con ese ID único   | #especial { ... }  |
+
+✅ Buenas prácticas:
+- Usa `class` para aplicar estilos reutilizables.
+- Usa `id` solo si necesitas seleccionar un único elemento (por ejemplo, para JS).
+- Puedes combinar clases: `class="enlace especial"`
+- Las clases pueden repetirse, los IDs no.
+- En caso de conflicto, **el ID tiene más prioridad** que una clase.
+*/

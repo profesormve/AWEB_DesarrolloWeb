@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo de caja</title>
+    <link rel="stylesheet" href="8_modelo_caja.css" />
+  </head>
+  <body>
+    <!-- ========================================================== -->
+    <!-- MODELO DE CAJA EN CSS                                      -->
+    <!-- ========================================================== -->
+    <!--
+      El modelo de caja es la base de toda estructura en CSS.
+
+      Cada elemento HTML es considerado una caja rectangular
+      compuesta por:
+      ✅ Contenido
+      ✅ Relleno (padding)
+      ✅ Borde (border)
+      ✅ Margen (margin)
+
+      Es fundamental para maquetar y distribuir espacios.
+    -->
+
+    <p>
+      Definimos una caja usando un <code>&lt;div&gt;</code> con clase <code>caja</code>.
+      Luego, aplicamos estilos desde CSS para ajustar fondo, tamaño, bordes, márgenes y padding.
+    </p>
+
+    <!-- Caja con estilos personalizados -->
+    <div class="caja">Este es el texto de mi caja</div>
+
+	<!-- Aunque se llame "Modelo de caja" no sólo se aplica a las cajas (div), sino se puede aplicar a otros elementos -->
+    <!-- Aplicar sobre una imagen - estilos de borde, padding y márgenes -->
+    <img class="imagen" src="./imagenes/bosque.png" alt="Bosque" />
+  </body>
+</html>

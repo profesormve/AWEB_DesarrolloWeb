@@ -1,0 +1,111 @@
+/* ───────────────────────────────────────────────────────────── */
+/* 🎯 OPCIÓN 1: Fondo de color sólido */
+/* ───────────────────────────────────────────────────────────── */
+
+/* Aplicamos un color de fondo plano al body. */
+body {
+	/* background-color: #3d2b40; */  /* Violeta oscuro */
+}
+
+
+
+/* ───────────────────────────────────────────────────────────── */
+/* 🖼️ OPCIÓN 2: Fondo con imagen */
+/* ───────────────────────────────────────────────────────────── */
+
+/* Existen dos formas comunes de cargar una imagen como fondo: */
+
+/* 2.1 Imagen externa (ruta absoluta desde internet) */
+/*
+body {
+	background-image: url('https://images.unsplash.com/photo-1740507619572-ac180ca2630f?q=80&w=2687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-repeat: no-repeat;
+	background-size: cover;        // Hace que la imagen cubra todo el fondo
+	background-position: center;   // Centra la imagen en la pantalla
+}
+*/
+
+/* 2.2 Imagen local (ruta relativa dentro de tu proyecto) */
+/*
+body {
+	background-image: url('./imagenes/bosque.png');
+	background-repeat: no-repeat;
+	background-size: contain;   // Ajusta la imagen sin deformarla
+	background-position: center;
+}
+*/
+
+/* 🔧 Otras propiedades útiles - imagen pequeña que no cubre todo el fondo: 
+   background-repeat:
+   - repeat       → repite en ambas direcciones (por defecto)
+   - no-repeat    → no repite
+   - repeat-x     → repite solo horizontal
+   - repeat-y     → repite solo vertical
+*/
+/* 
+	background-repeat: repeat 
+*/
+
+
+/* ─────────────────────────────────────────────────────────────────────────────────────────    */
+/* 🟪 OPCIÓN 3: Fondo SVG (vectorial) - pesan consideramente menos, por como se construyen  	*/
+/* ─────────────────────────────────────────────────────────────────────────────────────────    */
+/* RECURSO ÚTIL: https://heropatterns.com */
+
+/* 3.1 SVG en línea (inline): no necesita archivo externo, peso muy bajo */
+/*
+body {
+	background-color: #eeecf1;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+*/
+
+/* 🎨 SVG como archivo externo (imagen DESCARGADA en carpeta) */
+/*
+body {
+	background-color: #90a666;
+	background-image: url('./imagenes/comida.svg');
+	background-repeat: repeat;
+}
+*/
+
+
+/* ───────────────────────────────────────────────────────────── */
+/* 🧠 OPCIÓN 4: Fondos con CSS puros (solo CSS) */
+/* ───────────────────────────────────────────────────────────── */
+
+/* Esta técnica no necesita imágenes y es ideal para rendimiento.
+   Los patrones se generan con `radial-gradient`, `linear-gradient`, etc. 
+   RECURSO ÚTIL: https://heropatterns.com (CSS puro) */
+
+body {
+	background-color: #f5f5f5;
+	opacity: 0.8;
+
+	background: radial-gradient(circle, transparent 20%, #f5f5f5 20%, #f5f5f5 80%, transparent 80%, transparent),
+	            radial-gradient(circle, transparent 20%, #f5f5f5 20%, #f5f5f5 80%, transparent 80%, transparent) 17.5px 17.5px,
+	            linear-gradient(#ff0012 1.4px, transparent 1.4px) 0 -0.7px,
+	            linear-gradient(90deg, #ff0012 1.4px, #f5f5f5 1.4px) -0.7px 0;
+
+	background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+}
+
+
+/* ───────────────────────────────────────────────────────────── */
+/* ✅ TABLA RESUMEN Y CONSEJOS */
+/* ─────────────────────────────────────────────────────────────
+
+| OPCIÓN      | USO PRINCIPAL                      | PESO       | RENDIMIENTO | 
+|-------------|------------------------------------|----------- |-------------|
+| Color       | Fondo simple y rápido              | Muy bajo   | Excelente   |
+| Imagen      | Decoración realista o fotográfica  | Medio/alto | Medio       |
+| SVG inline  | Patrones ligeros vectoriales       | Muy bajo   | Excelente   |
+| CSS puro    | Patrones con gradientes            | Nulo       | Excelente   |
+
+🧠 Consejos finales:
+- Usa colores planos o gradientes si el diseño lo permite.
+- Evita imágenes grandes que ralenticen la web.
+- Usa SVG o CSS puro para patrones repetitivos con buen rendimiento.
+- Siempre cuida el contraste con el texto para garantizar la accesibilidad.
+
+*/

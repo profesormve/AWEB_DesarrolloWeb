@@ -1,0 +1,170 @@
+/* 
+--------------------------------------------------------
+📘 PROPIEDADES DE BACKGROUND EN CSS
+--------------------------------------------------------
+Sirven para definir el color, imagen y comportamiento
+del fondo de un elemento (body, div, article...).
+
+Principales propiedades:
+- background-color → color de fondo.
+- background-image → imagen de fondo.
+- background-repeat → repetición de la imagen.
+- background-size → tamaño de la imagen.
+- background-position → posición dentro del elemento.
+- background-attachment → comportamiento al hacer scroll.
+--------------------------------------------------------
+*/
+
+body {
+	/* Color de fondo general de la página */
+	background: #000;
+}
+
+.contenedor {
+	width: 1000px;
+	height: 700px;
+
+	/* Color base de fondo */
+	background: #ccc;
+
+	/* Imagen de fondo */
+	background-image: url('./imagenes/bosque.png');
+
+	/* Controla la repetición:
+	   - repeat (por defecto)
+	   - no-repeat (no se repite)
+	   - repeat-x / repeat-y (solo eje X o Y)
+	*/
+	background-repeat: no-repeat;
+
+	/* Tamaño de la imagen:
+	   - auto → usa el tamaño original.
+	   - cover → cubre todo el contenedor, recortando si es necesario.
+	   - contain → ajusta sin recortar, puede dejar espacios.
+	   - también puede usarse en px, %, etc.
+	*/
+	background-size: auto;
+
+	/* Posición de la imagen:
+	   - valores posibles: top, bottom, center, left, right 
+	   - combinaciones (por ej. top right)
+	*/
+	background-position: center;
+}
+
+article {
+	background: cornsilk; /* Fondo negro dentro del artículo */
+	padding: 20px;
+	width: 500px;
+}
+
+body {
+	/* Ejemplo de fondo con imagen externa (comentada)
+	background-image: url('https://images.unsplash.com/photo-1734639528206-59e0864b3863?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+
+	/* Imagen de fondo local */
+	background-image: url('imagenes/edificios.jpg');
+
+	/* Ajuste del tamaño de fondo */
+	background-size: cover; 
+	/* cover → ocupa todo el fondo de la pantalla */
+
+	/* Comportamiento al hacer scroll:
+	   - scroll (por defecto): la imagen se mueve con el contenido
+	   - fixed: se mantiene fija en la pantalla
+	   - local: se mueve con el área de scroll del elemento
+	*/
+	background-attachment: scroll;
+
+	/* Posición vertical inferior (abajo) */
+	background-position: top;
+}
+
+
+/* 
+--------------------------------------------------------
+🌄 background-size: cover;
+--------------------------------------------------------
+Hace que la imagen de fondo **cubra todo el área del elemento**,
+sin importar su tamaño original.
+
+📌 ¿Qué hace exactamente?
+- Escala la imagen proporcionalmente hasta que **toda la superficie**
+  del elemento esté cubierta.
+- Si las proporciones no coinciden, **recorta parte de la imagen**
+  (nunca la deforma).
+- Mantiene las proporciones originales de la imagen.
+
+🧭 Usos comunes:
+- Fondos de página completos (hero sections).
+- Cabeceras o secciones a pantalla completa.
+- Fondos fijos con `background-attachment: fixed` para efecto “parallax”.
+
+💡 Consejo:
+Combínalo con:
+- background-position: center;
+- background-repeat: no-repeat;
+para un resultado más limpio y centrado.
+
+--------------------------------------------------------
+*/
+
+
+/* 
+--------------------------------------------------------
+🎯 background-position → posición de la imagen de fondo
+--------------------------------------------------------
+Define dónde se coloca la imagen dentro del elemento.
+
+🧭 OPCIONES PRINCIPALES (palabras clave):
+--------------------------------------------------------
+top left       → esquina superior izquierda
+top center     → parte superior centrada
+top right      → esquina superior derecha
+
+center left    → centrada verticalmente, a la izquierda
+center center  → justo en el centro (por defecto)
+center right   → centrada verticalmente, a la derecha
+
+bottom left    → esquina inferior izquierda
+bottom center  → parte inferior centrada
+bottom right   → esquina inferior derecha
+
+📏 TAMBIÉN SE PUEDEN USAR VALORES NUMÉRICOS:
+--------------------------------------------------------
+background-position: 50% 50%;   → centro (igual que center)
+background-position: 100px 200px; → 100px desde la izquierda, 200px desde arriba
+background-position: 10% 80%;   → 10% horizontal, 80% vertical del contenedor
+
+🧮 NOTA:
+- El primer valor siempre es horizontal (x)
+- El segundo es vertical (y)
+- Si solo se pone uno, el otro asume 'center' por defecto
+--------------------------------------------------------
+*/
+
+/*
+--------------------------------------------------------
+📌 background-attachment → comportamiento del fondo al hacer scroll
+--------------------------------------------------------
+Define si la imagen de fondo se mueve junto al contenido
+o permanece fija en la pantalla o en el propio elemento.
+
+🧩 OPCIONES DISPONIBLES:
+--------------------------------------------------------
+1️⃣ scroll  (valor por defecto)
+   → La imagen de fondo se mueve al hacer scroll de la página.
+   → Es decir, "viaja" con el contenido.
+   Ejemplo: una textura o patrón que acompaña al texto.
+
+2️⃣ fixed
+   → La imagen de fondo se mantiene fija respecto a la ventana del navegador.
+   → El contenido se mueve, pero el fondo NO.
+   Ejemplo: fondos estáticos tipo “parallax”.
+
+3️⃣ local
+   → La imagen de fondo se mueve con el área de scroll del elemento,
+     no con toda la página.
+   → Se nota solo si el elemento tiene overflow: auto o scroll.
+   Ejemplo: un div con mucho texto y scroll interno.
+*/

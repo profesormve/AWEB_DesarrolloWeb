@@ -1,0 +1,57 @@
+/* =============================================== */
+/* 🎨 FORMATO DE TEXTO CON CSS                     */
+/* =============================================== */
+
+/* Estilo general del documento */
+body {
+	font-family: sans-serif; /* Fuente base para todo el documento */
+}
+
+/* Estilos para el título principal */
+h1 {
+	/* =======================
+	   FUENTE
+	========================= */
+	font-family: 'Times New Roman', Arial;
+	/* Lista de fuentes de reserva: si no encuentra la primera, usa la siguiente. */
+
+	font-size: 40px; /* Tamaño del texto */
+
+	font-style: italic; /* Opciones: normal | italic | oblique */
+
+	font-weight: normal; /* Opciones: normal | bold | 100 - 900 */
+
+	/* =======================
+	   ALINEACIÓN Y DECORACIÓN
+	========================= */
+	text-align: center; /* Opciones: left | center | right | justify */
+
+	text-decoration: underline; 
+	/* Opciones: none | underline | overline | line-through */
+
+	text-decoration: underline red 4px dotted; 
+	/* Combina varios valores: tipo de línea, color, grosor, estilo (solid, dotted, dashed...) */
+}
+
+/* Estilos para los párrafos */
+p {
+	text-align: justify; /* Justificar el texto para alinear ambos márgenes */
+
+	text-transform: uppercase; 
+	/* Opciones:
+	   - lowercase → todo en minúsculas
+	   - uppercase → todo en mayúsculas
+	   - capitalize → primera letra de cada palabra en mayúscula
+	*/
+
+	color: #995fc6; /* Color del texto en formato HEX */
+
+	line-height: 30px; /* Altura de línea: distancia vertical entre líneas */
+
+	letter-spacing: 2px; /* Espacio entre letras */
+
+	word-spacing: 10px; /* Espacio entre palabras */
+
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); 
+	/* Sombra del texto: desplazamiento horizontal, vertical, desenfoque, color con transparencia */
+}

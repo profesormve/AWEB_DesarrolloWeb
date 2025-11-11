@@ -1,0 +1,75 @@
+/* ───────────────────────────────────────────────────────────── */
+/* 🎨 COLORES EN CSS - DIFERENTES FORMAS DE DEFINIR COLORES     */
+/* ───────────────────────────────────────────────────────────── */
+
+/*
+1️⃣ Nombres de color estándar
+- Se usan directamente con su nombre en inglés (válido en todos los navegadores).
+- Hay más de 140 nombres reconocidos.
+- Útiles para pruebas rápidas o estilos sencillos.
+- Todos los nombres de colores https://www.htmlcsscolor.com/
+*/
+.color {
+	color: darkblue;
+}
+
+/*
+2️⃣ Hexadecimal
+- Empieza con "#" seguido de 3, 6 u 8 dígitos.
+- Muy usado en diseño web y editores como Figma, Canva o Photoshop.
+- 6 dígitos → formato clásico: #RRGGBB
+- 3 dígitos → forma corta: #RGB (por ejemplo: #000 = negro)
+- 8 dígitos → incluye opacidad (últimos 2 dígitos): #RRGGBBAA
+*/
+.color {
+	color: #926c1b;   /* Marrón mostaza */
+	/* color: #000;     Negro */
+	/* color: #8b29297d;  Rojo vino con transparencia */
+}
+
+/*
+3️⃣ RGB (Red, Green, Blue)
+- Se usa la función rgb(R, G, B)
+- Cada valor va de 0 a 255
+*/
+.color {
+	color: rgb(179, 32, 32);  /* Rojo vino */
+}
+
+/*
+4️⃣ RGBA (RGB + Alpha)
+- Igual que RGB pero con un valor extra: opacidad (de 0 a 1)
+- Útil para hacer textos o bordes semitransparentes
+*/
+.color {
+	color: rgba(189, 46, 189, 0.278);  /* Violeta translúcido */
+}
+
+/*
+5️⃣ HSL (Hue, Saturation, Lightness)
+- Funciona por tono (Hue), saturación (%) y luminosidad (%)
+- Muy práctico en diseño gráfico (tonos claros, oscuros, monocromáticos)
+- hsl(0, 100%, 50%) = rojo puro
+*/
+.color {
+	color: hsl(0, 55%, 37%);
+}
+
+/*
+💡 currentColor
+- Valor especial que reutiliza el color del texto actual (propiedad "color")
+- Muy útil para mantener coherencia (ej. border, outline, box-shadow, etc.)
+*/
+.color {
+	color: darkblue;
+	border: 5px solid currentColor; /* usa el mismo color que el texto, si se cambia el color no hace falta cambiar border también */
+}
+
+/*
+🧠 CONSEJOS:
+- Usa nombres si estás empezando.
+- Usa hex o RGB/RGBA para precisión.
+- Usa currentColor para consistencia.
+- Usa HSL si quieres modificar tonos o crear variantes fácilmente.
+- Elige un formato y mantenlo en el proyecto.
+*/

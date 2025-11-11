@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidades: px, %, em, rem</title>
+  <link rel="stylesheet" href="9_unidades.css" />
+</head>
+<body>
+  <h1>Comparativa entre unidades CSS: px, %, em, rem</h1>
+
+  <!-- px -->
+  <section class="bloque bloque-px">
+    <h2>Usando <code>px</code></h2>
+    <p>Este texto usa <strong>20px</strong>. Es un valor fijo, independiente del contenedor o navegador.</p>
+  </section>
+
+  <!-- % -->
+  <section class="bloque bloque-percent">
+    <h2>Usando <code>%</code></h2>
+    <p>Este bloque ocupa <strong>80%</strong> del ancho disponible. Es útil para diseños fluidos.</p>
+  </section>
+
+  <!-- em -->
+  <section class="bloque bloque-em">
+    <h2>Usando <code>em</code></h2>
+    <div class="contenedor-em">
+      <p>El tamaño base es <strong>20px</strong>.</p>
+      <p class="texto-em">Este texto usa <code>1.5em</code> → 30px</p>
+    </div>
+  </section>
+
+  <!-- rem -->
+  <section class="bloque bloque-rem">
+    <h2>Usando <code>rem</code></h2>
+    <div class="contenedor-rem">
+      <p>El tamaño base global es <strong>16px</strong>.</p>
+      <p class="texto-rem">Este texto usa <code>2rem</code> → 32px</p>
+    </div>
+  </section>
+
+
+  
+  <!-- RESUMEN -->
+  <section class="bloque resumen">
+    <h2>Resumen comparativo de unidades</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>¿Qué significa?</th>
+          <th>¿Cuándo usarla?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>px</code></td>
+          <td>Valor fijo en píxeles</td>
+          <td>Cuando se necesita precisión absoluta (bordes, iconos)</td>
+        </tr>
+        <tr>
+          <td><code>%</code></td>
+          <td>Relativo al tamaño del contenedor</td>
+          <td>Diseños fluidos, adaptable a distintas pantallas</td>
+        </tr>
+        <tr>
+          <td><code>em</code></td>
+          <td>Relativo al <strong>tamaño de fuente del padre</strong></td>
+          <td>Para escalar elementos internamente; cuidado con acumulación</td>
+        </tr>
+        <tr>
+          <td><code>rem</code></td>
+          <td>Relativo al <strong>tamaño de fuente del <code>html</code></strong></td>
+          <td>Para mantener consistencia y accesibilidad global</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Consejos finales</h2>
+    <ul>
+      <li>Usa <code>rem</code> para textos, paddings y márgenes: mejora la legibilidad y accesibilidad.</li>
+      <li>Usa <code>%</code> para anchuras y layouts adaptables.</li>
+      <li>Usa <code>em</code> con cuidado en estructuras anidadas: se acumula.</li>
+      <li>Evita <code>px</code> para fuentes, salvo en casos específicos como iconos o bordes finos.</li>
+      <li>Establece una base clara en <code>html</code> con <code>font-size</code> (por ejemplo, <code>16px</code>) y diseña usando <code>rem</code>.</li>
+    </ul>
+  </section>
+</body>
+</html>

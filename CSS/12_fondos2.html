@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="12_fondos2.css" />
+		<title>Fondos 2 - Propiedades CSS de Fondo</title>
+	</head>
+	<body>
+		<div class="contenedor"></div>
+
+		<article>
+			<h1>PROPIEDADES DE FONDO - 2 </h1>
+
+			<section>
+				<h2>Background-size: cover;</h2>
+				<p>
+					Hace que la imagen de fondo <strong>cubra todo el área del elemento</strong>,
+					sin importar su tamaño original.
+				</p>
+				<ul>
+					<li>Escala la imagen proporcionalmente hasta que toda la superficie esté cubierta.</li>
+					<li>Si las proporciones no coinciden, recorta parte de la imagen (nunca la deforma).</li>
+					<li>Mantiene las proporciones originales de la imagen.</li>
+				</ul>
+				<h3>Usos comunes:</h3>
+				<ul>
+					<li>Fondos de página completos (hero sections).</li>
+					<li>Cabeceras o secciones a pantalla completa.</li>
+					<li>Fondos fijos con <code>background-attachment: fixed</code> (efecto “parallax”).</li>
+				</ul>
+				<p>
+					<strong>Consejo:</strong> Combínalo con
+					<code>background-position: center;</code> y
+					<code>background-repeat: no-repeat;</code> para un resultado más limpio.
+				</p>
+			</section>
+			<hr>
+
+			<section>
+				<h2>Background-position</h2>
+				<p>Define dónde se coloca la imagen dentro del elemento.</p>
+
+				<h3>Opciones principales:</h3>
+				<ul>
+					<li><code>top left</code> → esquina superior izquierda</li>
+					<li><code>top center</code> → parte superior centrada</li>
+					<li><code>top right</code> → esquina superior derecha</li>
+					<li><code>center center</code> → centrada (por defecto)</li>
+					<li><code>bottom left</code> → esquina inferior izquierda</li>
+					<li><code>bottom center</code> → parte inferior centrada</li>
+					<li><code>bottom right</code> → esquina inferior derecha</li>
+				</ul>
+
+				<h3>También se pueden usar valores numéricos:</h3>
+				<ul>
+					<li><code>background-position: 50% 50%;</code> → centro</li>
+					<li><code>background-position: 100px 200px;</code> → 100px desde la izquierda, 200px desde arriba</li>
+					<li><code>background-position: 10% 80%;</code> → 10% horizontal, 80% vertical</li>
+				</ul>
+
+				<p><strong>Nota:</strong> El primer valor es horizontal (x) y el segundo vertical (y).</p>
+			</section>
+			<hr>
+
+			<section>
+				<h2>Background-attachment</h2>
+				<p>
+					Define si la imagen de fondo se mueve junto al contenido o permanece fija al hacer scroll.
+				</p>
+
+				<h3>Opciones disponibles:</h3>
+				<ul>
+					<li>
+						<code>scroll</code> (por defecto): el fondo se mueve con el contenido.
+					</li>
+					<li>
+						<code>fixed</code>: el fondo se mantiene fijo en la ventana del navegador (efecto parallax).
+					</li>
+					<li>
+						<code>local</code>: el fondo se mueve con el área de scroll del propio elemento (si tiene overflow).
+					</li>
+				</ul>
+			</section>
+		</article>
+	</body>
+</html>

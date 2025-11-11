@@ -1,0 +1,34 @@
+/* =========================================== */
+/*  OPCIÓN 1: Usar fuentes desde Google Fonts  */
+/* =========================================== */
+body {
+	font-family: 'Poppins', sans-serif;  /* Fuente personalizada → Poppins */
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+/* =========================================== */
+/*  OPCIÓN 2: Usar fuentes descargadas localmente */
+/* =========================================== */
+/* 🔽 Supongamos que los archivos están en ./fuentes/ */
+
+/* Estilo MEDIUM (peso 500) */
+@font-face {
+	font-family: 'Roboto';
+	src: url('./fuentes/Roboto-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+
+/* Estilo REGULAR (peso 400) */
+@font-face {
+	font-family: 'Roboto';
+	src: url('./fuentes/Roboto-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+/* Aplicar fuente local personalizada */
+p {
+	font-family: 'Roboto', sans-serif;  /* Se usa Roboto si está disponible, si no sans-serif */
+	font-weight: 400;
+}

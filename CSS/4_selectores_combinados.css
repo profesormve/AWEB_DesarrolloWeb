@@ -1,0 +1,50 @@
+/* =============================================== */
+/* SELECTOR DE CLASE BÁSICO                        */
+/* =============================================== */
+.menu {
+	background: lightgray;
+}
+
+/* =============================================== */
+/* SELECTOR DESCENDENTE (espacio)                  */
+/* =============================================== 
+   Selecciona todos los <a> que están DENTRO de un elemento con clase "menu",
+   sin importar el nivel de anidamiento.
+*/
+.menu a {
+	color: red;
+}
+
+/* =============================================== */
+/* SELECTOR DE HIJO DIRECTO (>)                    */
+/* =============================================== 
+   Solo selecciona los <a> que son hijos DIRECTOS de .menu,
+   es decir, NO selecciona los <a> que están dentro de .submenu.
+*/
+.menu > a {
+	font-size: 24px;
+}
+
+/* =============================================== */
+/* SELECTOR DE HERMANO ADYACENTE (+)               */
+/* =============================================== 
+   Selecciona solo el PRIMER <p> que viene justo después del <h3>.
+   Este está comentado por defecto.
+*/
+
+h3 + p {
+	color: blue;
+	font-size: 22px;
+}
+
+
+/* =============================================== */
+/* SELECTOR DE HERMANOS GENERALES (~)              */
+/* =============================================== 
+   Selecciona TODOS los <p> que vienen después del <h3> (no necesariamente justo después),
+   siempre que estén al mismo nivel jerárquico (hermanos).
+*/
+h3 ~ p {
+	color: red;
+	font-size: 30px;
+}

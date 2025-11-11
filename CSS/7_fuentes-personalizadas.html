@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- ============================== -->
+		<!--  OPCIÓN 1: Google Fonts vía CDN -->
+		<!-- ============================== -->
+		<!-- Permite conectar a servidores de Google -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Incluir solo los estilos necesarios (Poppins en este caso) -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS externo -->
+		<link rel="stylesheet" href="7_fuentes_personalizadas.css" />
+
+		<title>Fuentes Personalizadas</title>
+	</head>
+	<body>
+		<!-- ======================================= -->
+		<!-- TEXTO PARA PROBAR LA FUENTE PERSONALIZADA -->
+		<!-- ======================================= -->
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero unde quaerat labore natus voluptate.
+		</p>
+	</body>
+
+		<!-- 
+			📌 RESUMEN:
+			- Puedes usar fuentes desde Internet (Google Fonts)
+			- O usar archivos locales descargados (.ttf) con @font-face
+
+			✅ RECOMENDACIONES:
+			- Solo usa los pesos (300, 400, 600, etc.) que vayas a necesitar
+			- Usa máximo 2 tipos de fuente para mantener diseño limpio
+			- Siempre pon una fuente de respaldo: sans-serif, serif, monospace...
+			- No uses muchas fuentes distintas, ralentiza y desorganiza la web
+		-->
+
+		<!-- 
+			📎 REFERENCIAS:
+			- Página para obtener fuentes: https://fonts.google.com
+			- Para incluir una fuente:
+			  1️⃣ Copia el <link> que te da Google en la cabecera
+			  2️⃣ Usa font-family en CSS → font-family: 'NombreDeFuente', sans-serif;
+
+			- Para usar fuente descargada:
+			  ⬇️ Crea carpeta "fuentes" y pega .ttf
+			  Usa @font-face en tu CSS así:
+			  
+			  @font-face {
+			      font-family: 'MiFuente';
+			      src: url('./fuentes/MiFuente-Regular.ttf') format('truetype');
+			      font-weight: 400;
+			  }
+		-->
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="3_selectores_class_id.css" />
+		<title>Selectores</title>
+	</head>
+	<body>
+		<!-- =============================================== -->
+		<!-- ENCABEZADO CON ENLACES                          -->
+		<!-- =============================================== 
+			Se utilizan atributos `class` para aplicar estilos comunes
+			y `id` cuando queremos seleccionar un elemento único.
+		-->
+		<header>
+			<h1>Mi blog</h1>
+			<p>Yo soy Carlos Arturo y este es mi blog</p>
+			<!-- 
+				Este enlace tiene:
+				- class="enlace especial" → múltiples clases
+				- id="especial" → identificador único
+			-->
+			<a href="#" class="enlace especial" id="especial">Inicio</a>
+
+			<!-- También tiene doble clase, pero no ID -->
+			<a href="#" class="enlace especial">Blog</a>
+
+			<!-- Solo una clase -->
+			<a href="#" class="enlace">Contacto</a>
+		</header>
+
+		<main>
+			<article>
+				<h2>Titulo #1</h2>
+				<p>
+					Lorem ipsum <a href="#">dolor sit amet</a> consectetur adipisicing elit. Sed consequatur aliquam
+					odit quibusdam reprehenderit omnis totam, maiores ratione enim veniam?
+				</p>
+				<a href="#" class="enlace">Leer más</a>
+				<hr />
+			</article>
+
+			<article>
+				<h2>Titulo #2</h2>
+				<p>
+					Lorem ipsum <a href="#">dolor sit amet</a> consectetur adipisicing elit. Sed consequatur aliquam
+					odit quibusdam reprehenderit omnis totam, maiores ratione enim veniam?
+				</p>
+				<a href="#" class="enlace especial">Leer más</a>
+				<hr />
+			</article>
+		</main>
+	</body>
+</html>

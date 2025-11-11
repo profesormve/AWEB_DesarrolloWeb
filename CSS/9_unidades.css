@@ -1,0 +1,57 @@
+/* Establecemos el tamaño base para rem (1rem = 16px) */
+html {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* Estilo común para todos los bloques */
+.bloque {
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* px: valor absoluto */
+.bloque-px p {
+  font-size: 20px; /* fijo: no cambia según el padre ni configuraciones del navegador */
+}
+
+/* %: relativo al contenedor */
+.bloque-percent {
+  width: 80%; /* ocupa el 80% del ancho de su contenedor */
+  background-color: #f0f8ff;
+}
+
+/* em: relativo al tamaño de fuente del padre */
+.contenedor-em {
+  font-size: 20px; /* base para los elementos hijos */
+  background-color: #ffe4e1;
+  padding: 10px;
+}
+.texto-em {
+  font-size: 1.5em; /* 1.5 × 20px = 30px */
+}
+
+/* rem: relativo a html (16px) */
+.contenedor-rem {
+  font-size: 22px; /* NO afecta al rem */
+  background-color: #e0ffff;
+  padding: 10px;
+}
+.texto-rem {
+  font-size: 2rem; /* 2 × 16px = 32px */
+}
+
+/* Estilo del resumen */
+.resumen ul {
+  padding-left: 20px;
+}
+.resumen li {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,61 @@
+/* =============================================== */
+/* SELECTOR UNIVERSAL                              */
+/* =============================================== 
+   El selector * aplica estilos a todos los elementos.
+*/
+
+/*
+* {
+	color: blue;
+}
+*/
+
+/* =============================================== */
+/* SELECTORES SIMPLES                              */
+/* =============================================== 
+   Seleccionan elementos HTML directamente por su nombre.
+*/
+/*
+h1 {
+	color: blue;
+}
+*/
+
+/* =============================================== */
+/* SELECTOR DE GRUPOS                              */
+/* =============================================== 
+   Aplica el mismo estilo a varios elementos a la vez. En este caso, todos los encabezados del documento tendrán color rojo.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: red;
+}
+
+/* =============================================== */
+/* SELECTOR DESCENDENTE                            */
+/* =============================================== 
+   Selecciona elementos que están dentro de otro.
+   - "main p" → todos los <p> dentro de <main>
+   - "main p a" → todos los <a> dentro de <p> dentro de <main>
+*/
+main p {
+	font-size: 20px;
+}
+
+main p a {
+	font-size: 26px;
+	color: blue;
+}
+
+/* =============================================== */
+/* POSIBLES MEJORAS Y BUENAS PRÁCTICAS             */
+/* =============================================== 
+✅ Especificar clases o IDs para mayor control.
+✅ Usar selectores de tipo solo para estilos globales.
+✅ No abusar del selector universal (*).
+✅ Comentar los estilos para facilitar el aprendizaje.
+*/

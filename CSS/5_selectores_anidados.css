@@ -1,0 +1,95 @@
+/* ====================================================== */
+/* 🧩 CSS ANIDADO VS SIN ANIDAR                           */
+/* ====================================================== */
+/*
+📌 En CSS existen dos formas de escribir reglas de estilo:
+   1. CSS tradicional (sin anidar)
+   2. CSS moderno (anidado)
+----------------------------------------------------------
+🔹 1. CSS SIN ANIDAR (TRADICIONAL)
+----------------------------------------------------------
+*/
+
+/* 
+.contenedor .articulo {
+	background: lightgray;
+}
+
+.contenedor .articulo h2 {
+	font-size: 40px;
+}
+
+.contenedor .articulo p {
+	font-size: 20px;
+}
+
+.contenedor .articulo a {
+	color: red;
+	font-size: 20px;
+}
+
+.contenedor .articulo.destacado {
+	background: lightblue;
+}
+
+.contenedor .articulo.destacado h2 {
+	color: blue;
+} 
+*/
+
+
+/*----------------------------------------------------------
+🔹 2. CSS ANIDADO (NESTED CSS)
+----------------------------------------------------------
+- Permite agrupar reglas dentro de sus padres, como en HTML.
+- Es más limpio y legible.
+- Solo funciona en navegadores modernos o usando herramientas como:
+    → Sass, PostCSS, Vite, etc.
+*/
+
+/*
+.contenedor {
+	.articulo {
+		background: lightgray;
+
+		&.destacado {
+			background: lightblue;
+
+			h2 {
+				color: blue;
+			}
+		}
+
+		h2 {
+			font-size: 40px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+
+		a {
+			color: red;
+			font-size: 20px;
+		}
+	}
+}
+*/
+
+/* 
+	----------------------------------------------------------
+	✅ COMPARATIVA
+
+	| Característica        | Sin anidar         | Anidado                 |
+	|-----------------------|--------------------|-------------------------|
+	| Compatibilidad        | ✅ Total            | ⚠️ Solo moderno        |
+	| Legibilidad           | 🔸 Media            | ✅ Alta                |
+	| Requiere herramientas | ❌ No               | ✅ En algunos casos    |
+	| Repetición de código  | 🔴 Alta             | ✅ Baja                |
+
+	----------------------------------------------------------
+	✅ RECOMENDACIONES:
+	- Usa anidación si tu entorno lo permite.
+	- Si usas HTML puro sin herramientas modernas, usa CSS tradicional.
+	- No anides más de 3 niveles para evitar confusión.
+*/
