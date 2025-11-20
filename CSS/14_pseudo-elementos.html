@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="14_pseudo-elementos.css" />
+		<title>Pseudo Elementos</title>
+	</head>
+	<body>
+
+		<!--
+			INTRODUCCIÓN A LOS PSEUDO-ELEMENTOS
+			-----------------------------------
+			Los pseudo-elementos permiten seleccionar y dar estilo a partes específicas
+			de un elemento SIN necesidad de añadir etiquetas adicionales en el HTML.
+
+			Se escriben con :: y algunos de los más usados son:
+			- ::first-letter → primera letra de un texto
+			- ::first-line   → primera línea de un párrafo
+			- ::selection    → texto seleccionado con el ratón
+			- ::before       → contenido que aparece antes del elemento
+			- ::after        → contenido que aparece después del elemento
+			- ::marker       → modifica el marcador de <li>
+			- ::placeholder  → estilo del placeholder en <input>
+
+			Ventaja principal:
+			Permiten añadir o modificar partes visuales SIN tocar el HTML.
+		-->
+
+		<!--
+			Aquí se muestra el método tradicional:
+			Se envuelve la primera letra en un span para poder darle estilo.
+			Esto obliga a modificar el HTML.
+			Luego veremos cómo con ::first-letter NO hace falta.
+		-->
+		
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit...
+		</p>
+
+
+		<p>
+			<span class="primera_letra">L</span>orem ipsum dolor sit amet consectetur adipisicing elit...
+		</p>
+
+		<p>
+			<span class="primera_letra">L</span>orem ipsum dolor sit amet consectetur adipisicing elit...
+		</p>
+
+		<!--
+			Estos dos párrafos NO tienen span.
+			La primera letra se estiliza usando ::first-letter directamente desde CSS.
+		-->
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit...
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit...
+		</p>
+
+		<!--
+			La caja de abajo utiliza ::before y ::after para añadir texto ANTES y DESPUÉS.
+			Esto se usa para etiquetas, adornos, iconos o efectos decorativos.
+		-->
+		<div class="caja">asdfasd</div>
+
+		<!--
+			La lista utiliza ::marker para cambiar el símbolo del <li>.
+		-->
+		<ul class="lista">
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+		</ul>
+
+		<!--
+			El input utiliza ::placeholder para dar estilo al texto que aparece
+			cuando el campo está vacío.
+		-->
+		<input type="text" placeholder="Nombre" />
+	</body>
+</html>

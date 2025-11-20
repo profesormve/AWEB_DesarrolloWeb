@@ -1,0 +1,90 @@
+/* 
+	PSEUDO-ELEMENTOS APLICADOS A PÁRRAFOS
+	--------------------------------------
+	::first-letter → selecciona SOLO la primera letra del párrafo.
+	::first-line   → selecciona SOLO la primera línea visible
+	                 (depende del ancho del contenedor).
+*/
+
+/* .primera_letra{
+	font-size: 40px;
+	font-weight: bold;
+} */
+
+p {
+	/* Aumentamos tamaño y la hacemos destacada */
+	/* &::first-letter {
+		font-size: 40px;
+		font-weight: bold;
+	} */
+
+	/* La primera línea se colorea y se aumenta su tamaño */
+	/* &::first-line {
+		background: #c9a9cf;
+		font-size: 18px;
+		line-height: 50px;
+	} */
+}
+
+/*
+	::selection se activa cuando seleccionas texto con el ratón.
+	Se aplica a TODO lo seleccionable dentro del documento.
+*/
+* {
+	/* &::selection {
+		background: red;
+		color: #fff;
+	} */
+}
+
+/*
+	::before y ::after permiten insertar contenido VIRTUAL
+	antes o después de un elemento.
+
+	- No aparece en el HTML.
+	- Es ideal para iconos, etiquetas, cintas decorativas, etc.
+	- Requiere SIEMPRE la propiedad "content".
+*/
+.caja {
+	/* background: #f9a03f;
+	height: 150px;
+	width: 150px;
+
+	&::before {
+		content: 'Contenido antes de la caja.';
+		display: block;
+		background: #000;
+		color: #fff;
+	}
+
+	&::after {
+		content: 'Contenido despues de la caja.';
+		display: block;
+		background: #000;
+		color: #fff;
+	} */
+}
+
+/*
+	::marker sirve para modificar el icono/símbolo de las listas (<li>)
+	Ideal para cambiar los puntos por iconos, números personalizados, etc.
+*/
+.lista {
+	/* li {
+		&::marker {
+			content: ' + ';
+			font-size: 22px;
+			color: red;
+		}
+	} */
+}
+
+/*
+	::placeholder modifica el texto que aparece en un input cuando está vacío.
+*/
+input {
+	/* &::placeholder {
+		color: blue;
+		font-weight: bold;
+	} */
+}
