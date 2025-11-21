@@ -1,0 +1,67 @@
+/* Clase general para resaltar las cajas del ejemplo */
+.caja {
+	font-size: 20px;
+	background: #65a665;
+}
+
+
+/* =======================================================
+   ELEMENTOS INLINE
+   =======================================================
+   display: inline;
+   ✔ No aceptan width ni height
+   ✔ No aceptan margin-top / margin-bottom
+   ✔ Se alinean en una misma línea
+*/
+.inline {
+	/* display: inline; */
+	/* Ejemplo: un <span> o un <a> */
+}
+
+
+/* =======================================================
+   ELEMENTOS BLOCK
+   =======================================================
+   display: block;
+   ✔ Ocupan el 100% del ancho disponible
+   ✔ Se les puede aplicar width, height, margin y padding
+   ✔ Fuerzan un salto de línea antes y después
+*/
+.block {
+	/* display: block;
+	margin: 10px;
+	padding: 30px;
+	width: 200px;
+	height: 200px;
+	*/
+}
+
+
+/* =======================================================
+   ELEMENTOS INLINE-BLOCK
+   =======================================================
+   display: inline-block;
+   ✔ Mantienen el comportamiento inline (alineación horizontal)
+   ✔ Pero permiten width, height, padding y margin
+   ✔ Ideales para cajas alineadas tipo tarjetas
+*/
+.inline-block {
+	/* display: inline-block;
+	margin: 10px;
+	padding: 30px;
+	width: 200px;
+	height: 200px;
+	vertical-align: top; 
+	*/
+}
+
+
+/* =======================================================
+   display: none
+   =======================================================
+   ✔ Oculta completamente el elemento
+   ✔ No ocupa espacio
+*/
+.none {
+	/* display: none; */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="16_display.css" />
+	<title>Elementos Inline y Block</title>
+</head>
+<body>
+
+	<!-- ===========================================================
+	     TIPOS DE ELEMENTOS SEGÚN SU COMPORTAMIENTO EN PANTALLA
+	     ===========================================================
+	     HTML define dos comportamientos principales:
+	     1) BLOCK (bloque)
+	     2) INLINE (en línea)
+	     Cada tipo ocupa espacio y se comporta de forma diferente.
+	     A continuación se muestran ejemplos reales.
+	-->
+
+
+	<!-- ===========================================================
+	     ELEMENTOS BLOCK (BLOQUE)
+	     ===========================================================
+	     ✔ Ocupan TODO el ancho disponible de la pantalla.
+	     ✔ Siempre empiezan en una nueva línea.
+	     ✔ Se les puede aplicar:
+	         - width / height
+	         - margin / padding
+	         - background, border, etc.
+	     ✔ Empujan hacia abajo a los elementos siguientes.
+
+	     Ejemplos típicos: <div>, <p>, <h1>, <section>, <article>, etc.
+	-->
+	<div class="caja">
+		Hola soy un div (elemento block)
+	</div>
+
+	<p class="caja">
+		Hola soy un párrafo (también block)
+	</p>
+
+
+
+	<!-- ===========================================================
+	     ELEMENTOS INLINE (EN LÍNEA)
+	     ===========================================================
+	     ✔ Ocupan SOLO el espacio necesario para su contenido.
+	     ✔ NO empiezan en una nueva línea.
+	     ✔ NO aceptan width ni height.
+	     ✔ NO aceptan margin vertical (arriba y abajo).
+	     ✔ Se colocan uno al lado del otro.
+
+	     Ejemplos típicos: <a>, <span>, <img>, <input>, <strong>, <em>, etc.
+	-->
+
+	<a class="caja" href="#">
+		Enlace inline
+	</a>
+
+	<a class="caja" href="#">
+		Otro enlace inline (se coloca al lado del anterior)
+	</a>
+
+
+	<!-- ===========================================================
+	     inline-block (MEZCLA)
+	     ===========================================================
+	     display: inline-block;
+	     ✔ Se comporta como inline (se pueden alinear horizontalmente)
+	     ✔ Pero permite width, height, padding y margin como block
+	     Es perfecto para crear cajas alineadas lado a lado.
+	-->
+
+	<!-- Ejemplo comentado (puedes descomentar para visualizarlo)
+	<img class="caja inline-block" width="200" src="./imagenes/bosque.png" alt="">
+	<span class="caja inline-block">
+		Hola soy un span, pero convertido en caja
+	</span>
+	-->
+
+
+	<!-- ===========================================================
+	     display: none
+	     ===========================================================
+	     ✔ Oculta completamente el elemento
+	     ✔ NO reserva espacio (desaparece por completo)
+	     ✔ Se usa para alternar visibilidad con JS o CSS
+	-->
+
+	<!-- Ejemplo comentado:
+	<h1 class="caja none">Este texto está oculto con display: none</h1>
+	-->
+
+</body>
+</html>

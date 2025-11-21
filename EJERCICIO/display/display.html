@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="display.css" />
+	<title>Galería de imágenes</title>
+</head>
+<body class="contenedor">
+	<!-- ENCABEZADO (ELEMENTO BLOCK) -->
+	<header class="cabecera">
+		<h1>Galería de imágenes</h1>
+		<p>Ejemplo para practicar elementos block, inline e inline-block.</p>
+	</header>
+
+	<!-- NAVEGACIÓN SUPERIOR (ENLACES INLINE / INLINE-BLOCK) -->
+	<nav class="navegacion">
+		<!-- Los enlaces son inline por defecto, aquí los trataremos como "botones" -->
+		<a href="#naturaleza" class="nav-enlace">Naturaleza</a>
+		<a href="#ciudad" class="nav-enlace">Ciudad</a>
+		<a href="#animales" class="nav-enlace">Animales</a>
+	</nav>
+
+	<main>
+		<!-- SECCIÓN 1: GALERÍA DE NATURALEZA -->
+		<section id="naturaleza" class="galeria">
+			<h2>Galería: Naturaleza</h2>
+
+			<!-- Cada figure será una "tarjeta" en inline-block -->
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Bosque">
+				<figcaption>Bosque verde</figcaption>
+			</figure>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Lago">
+				<figcaption>Lago al atardecer</figcaption>
+			</figure>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Montaña">
+				<figcaption>Montañas nevadas</figcaption>
+			</figure>
+		</section>
+
+		<!-- SECCIÓN 2: GALERÍA DE CIUDAD -->
+		<section id="ciudad" class="galeria">
+			<h2>Galería: Ciudad</h2>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Rascacielos">
+				<figcaption>Rascacielos</figcaption>
+			</figure>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Calle">
+				<figcaption>Calle iluminada</figcaption>
+			</figure>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Plaza">
+				<figcaption>Plaza central</figcaption>
+			</figure>
+		</section>
+
+		<!-- SECCIÓN 3: GALERÍA DE ANIMALES -->
+		<section id="animales" class="galeria">
+			<h2>Galería: Animales</h2>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Perro">
+				<figcaption>Perro</figcaption>
+			</figure>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Gato">
+				<figcaption>Gato</figcaption>
+			</figure>
+
+			<figure class="galeria-item">
+				<img src="../../CSS/imagenes/arbol.png" alt="Pájaro">
+				<figcaption>Pájaro</figcaption>
+			</figure>
+		</section>
+	</main>
+</body>
+</html>
