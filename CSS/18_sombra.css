@@ -1,0 +1,48 @@
+
+
+/* Estilo general de las tarjetas */
+.card {
+	width: 500px;
+	padding: 20px;
+    border: 1px solid #000;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+/* ======================================================= */
+/* Ejemplo 1: sombra básica desplazada                     */
+/* ======================================================= */
+.sombra-1 {
+	box-shadow: 15px 10px 0px 0px #000;
+}
+
+/* ======================================================= */
+/* Ejemplo 2: sombra tipo “borde” usando spread            */
+/* ======================================================= */
+.sombra-2 {
+	box-shadow: 0 0 0 10px #cfcfcf;
+}
+
+/* ======================================================= */
+/* Ejemplo 3: sombra suave con blur grande                 */
+/* ======================================================= */
+.sombra-3 {
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* ======================================================= */
+/* Ejemplo 4: sombra interna (inset)                       */
+/* ======================================================= */
+.sombra-inset {
+	box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ======================================================= */
+/* Ejemplo 5: sombra animada con hover y transición        */
+/* ======================================================= */
+.sombra-hover {
+	transition: box-shadow 0.5s;
+    &:hover{
+        box-shadow: 10px 12px 0px 0px #000;
+    }
+}

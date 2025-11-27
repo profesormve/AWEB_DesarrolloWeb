@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sombras en CSS (box-shadow)</title>
+        <link rel="stylesheet" href="18_sombra.css">
+
+		<!-- ======================================================= -->
+		<!--   SOMBRAS EN CSS (box-shadow)            -->
+		<!-- ======================================================= -->
+		<!-- 
+			box-shadow permite añadir sombras a elementos HTML.
+			Es una de las propiedades más usadas en diseño moderno:
+			- Tarjetas
+			- Botones
+			- Modales
+			- Efectos de profundidad estilo Material Design
+
+			La sintaxis general es:
+
+			---------------------------------------------------------
+			box-shadow: X Y BLUR SPREAD COLOR inset?;
+			---------------------------------------------------------
+
+			Donde:
+
+			• X = Desplazamiento horizontal (+ derecha, - izquierda)
+			• Y = Desplazamiento vertical   (+ abajo, - arriba)
+			• BLUR  = Difuminado de la sombra (0 = borde duro)
+			• SPREAD = Expansión de la sombra (tamaño que crece)
+			• COLOR = Color de la sombra (rgb, rgba, hex...)
+			• inset = (opcional) sombra hacia adentro del elemento
+
+			Ejemplo:
+			box-shadow: 10px 20px 30px 0 rgba(0,0,0,0.3);
+
+			10px → se desplaza hacia la derecha
+			20px → se baja la sombra hacia abajo
+			30px → sombra muy difusa
+			0    → no se expande
+			color → negro semitransparente
+		-->
+	</head>
+
+	<body>
+
+		<h1>Uso las sombras en CSS (box-shadow)</h1>
+        <ul>
+			<li>Utiliza <b>X e Y</b> para definir la dirección de la sombra.</li>
+			<li>Usa <b>blur</b> para suavidad y <b>spread</b> expansión (tamaño que crece)</li>
+			<li>Usa <b>rgba()</b> para sombras profesionales con transparencia.</li>
+			<li><b>inset</b> te permite crear sombras internas.</li>
+			<li>Combina sombras + hover para efectos dinámicos en UI.</li>
+		</ul>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 1                                              -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 1 – Sombra con desplazamiento</h2>
+		<div class="card sombra-1">
+			<b>Sombra desplazada:</b> usa X e Y para mover la sombra.
+			<br /><br />
+			<code>box-shadow: 15px 10px 0px 0px #000;</code>
+		</div>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 2                                              -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 2 – Sombra en forma de borde</h2>
+		<div class="card sombra-2">
+			<b>Sombra tipo borde:</b> usa solo SPREAD para expandirse.
+			<br /><br />
+			<code>box-shadow: 0px 0px 0px 10px #cfcfcf;</code>
+		</div>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 3                                              -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 3 – Sombra difusa y suave</h2>
+		<div class="card sombra-3">
+			<b>Sombra suave:</b> mucho blur crea profundidad realista.
+			<br /><br />
+			<code>box-shadow: 0 0 40px 5px rgba(0,0,0,0.25);</code>
+		</div>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 4                                              -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 4 – Sombra interna (inset)</h2>
+		<div class="card sombra-inset">
+			<b>Sombra interna:</b> se mete dentro del contenido.
+			<br /><br />
+			<code>box-shadow: inset 0 0 20px 5px rgba(0,0,0,0.3);</code>
+		</div>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 5                                              -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 5 – Sombra animada con hover</h2>
+		<div class="card sombra-hover">
+			<b>Pasa el ratón por encima:</b> aparece la sombra con transición.
+			<br /><br />
+			<code>
+				transition: box-shadow 0.5s;<br />
+				box-shadow: 10px 12px 0px 0px #000; (al pasar el ratón)
+			</code>
+		</div>
+	</body>
+</html>
