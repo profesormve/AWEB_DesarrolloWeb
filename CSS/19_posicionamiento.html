@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Posicionamiento en CSS (position)</title>
+		<link rel="stylesheet" href="19_posicionamiento.css" />
+
+		<!-- ======================================================= -->
+		<!--  POSICIONAMIENTO EN CSS (position)                      -->
+		<!-- ======================================================= -->
+		<!-- 
+			Con position controlamos cómo se colocan los elementos en la página
+			y si se pueden "sacar" del flujo normal o fijarlos al hacer scroll.
+
+			Los valores más habituales son:
+
+			1) static   → valor por defecto, sin desplazamientos manuales.
+			2) relative → permite desplazar el elemento desde su posición original.
+			3) absolute → se posiciona mediante coordenadas, fuera del flujo normal.
+			4) fixed    → similar a absolute pero pegado a la ventana (viewport).
+			5) sticky   → mezcla de relative + fixed: se fija al hacer scroll.
+
+			Además, usamos:
+			- top, right, bottom, left → para indicar el desplazamiento.
+			- El elemento padre con position ≠ static sirve de referencia
+			  para los hijos con position: absolute.
+		-->
+	</head>
+
+	<body>
+		<h1>Posicionamiento en CSS (position)</h1>
+
+		<!-- ======================================================= -->
+		<!-- DEMO GENERAL DE CAJAS (usa la clase .posicionada)       -->
+		<!-- ======================================================= -->
+		<!-- 
+			En esta demo tenemos varias cajas numeradas.
+			La caja con clase "posicionada" es la que usaremos para probar
+			los distintos valores de position desde el CSS.
+		-->
+
+		<div>
+			<div class="caja">1</div>
+
+			
+			<div class="caja posicionada">2</div>
+			<!-- <div class="caja_padre">
+				PADRE
+				<div class="caja posicionada">2</div>
+			</div> -->
+
+			<div class="caja">3</div>
+			<div class="caja">4</div>
+			<div class="caja">5</div>
+			<div class="caja">6</div>
+			<div class="caja">7</div>
+			<div class="caja">8</div>
+			<div class="caja">9</div>
+			<div class="caja">10</div>
+		</div>
+
+		<!-- 
+			1) Empieza dejando .posicionada comentada (static por defecto).
+			2) Activa el bloque de relative y recarga → verás la caja desplazada.
+			3) Activa absolute → la caja 2 se "superpone" y desaparece del flujo.
+			4) Añade .caja_padre con position: relative → ahora absolute toma al padre
+			   como referencia.
+			5) Prueba fixed para simular una barra fija.
+			6) Finalmente, sticky para mostrar cómo se fija al hacer scroll.
+		-->
+	</body>
+</html>

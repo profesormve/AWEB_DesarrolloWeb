@@ -1,0 +1,145 @@
+/* ======================================================= */
+/* POSICIONAMIENTO EN CSS (position)                       */
+/* ======================================================= */
+/*
+    La propiedad position define cómo se coloca un elemento en la página
+    y cómo responde a las propiedades top, right, bottom y left.
+
+    Valores más usados:
+
+    1) position: static    (por defecto)
+       - No admite desplazamientos con top / left / bottom / right.
+       - El navegador coloca el elemento siguiendo el flujo normal.
+
+    2) position: relative
+       - El elemento mantiene su hueco en el flujo normal.
+       - Podemos moverlo desde su posición original con top / left...
+       - El resto de elementos respetan ese hueco.
+
+    3) position: absolute
+       - El elemento sale del flujo normal (como si “flotase” encima).
+       - No ocupa hueco: los demás se comportan como si no existiera.
+       - Se posiciona respecto al ancestro POSICIONADO más cercano
+         (el primer padre con position ≠ static).
+       - Si no encuentra ancestro posicionado, usa el body (la página).
+
+    4) position: fixed
+       - Similar a absolute, pero pegado a la ventana del navegador.
+       - Siempre queda visible aunque hagamos scroll.
+       - Se usa mucho para barras fijas, menús, botones flotantes…
+
+    5) position: sticky
+       - Mezcla de relative + fixed.
+       - Comienza en su posición normal.
+       - Cuando hacemos scroll y se alcanza un umbral (top, por ejemplo),
+         el elemento se “pega” y se comporta como fixed.
+*/
+
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: white;
+}
+
+/* ======================================================= */
+/* Estilo general de las cajas                             */
+/* ======================================================= */
+.caja{
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 40px;
+    margin: 20px;
+}
+
+/* ======================================================= */
+/* EJEMPLO 1: position: static (valor por defecto)         */
+/* Aunque pongamos top / left, NO tendrá efecto.
+    top: 50px;
+    left: 50px; */
+/* ======================================================= */
+
+/* .posicionada{
+    position: static;
+    background: green;
+} */
+
+
+/* ======================================================= */
+/* EJEMPLO 2: position: relative                           */
+/* Se puede desplazar desde su posición original            */
+/* PERMITE USAR TOP , BUTTON , LEFT Y RIGHT                 */
+/* El resto de .caja respetan su hueco original, aunque visualmente */
+/* ======================================================= */
+
+/* .posicionada{
+    background: green;
+    position: relative;
+    top: 50px;   
+    left: 50px;  
+} */
+/* lo mismo que button: -50px */
+/* lo mismo que right: -50px */
+
+
+
+/* ======================================================= */
+/* EJEMPLO 3: position: absolute respecto al body          */
+/* POSICION ABSOLUTE -- PERMITE USAR TOP , BUTTON , LEFT Y RIGHT */  
+/* La caja "sale" del flujo normal. */
+/* las otras cajas se colocan como si esta no existiera. */
+/* ======================================================= */
+  
+/* .posicionada{
+    background: green;
+    position: absolute;
+    top: 50px;   
+    left: 50px;   
+} */
+
+
+/* ======================================================= */
+/* EJEMPLO 4: absolute dentro de un contenedor padre       */
+/* ======================================================= */
+
+/* .caja_padre{
+    width: 600px;
+    height: 400px;
+    background-color: gray;
+    position: relative;
+}  */
+
+
+/* ======================================================= */
+/* EJEMPLO 5: position: fixed                              */
+/* Se pega a una posición y puedes seguir navegando no se mueve     */
+/* ======================================================= */
+
+/* .posicionada{
+    background: green;
+    position: fixed;
+    top: 50px;   
+    left: 50px;   
+}  */
+
+
+/* ======================================================= */
+/* EJEMPLO 6: position: sticky                              */
+/* Se pega a la parte superior de la ventana cuando hacemos scroll              */
+/* ======================================================= */
+
+/* .posicionada{
+    background: green;
+    position: fixed;
+    top: 50px;   
+    left: 50px;   
+}  */
+
+
