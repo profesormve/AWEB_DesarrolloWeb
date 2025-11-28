@@ -1,0 +1,66 @@
+/* ======================================================= */
+/* CONTROL DE PROFUNDIDAD CON z-index                      */
+/* ======================================================= */
+/*
+    z-index controla el ORDEN EN EL EJE Z de los elementos,
+    es decir, cuál aparece encima de cuál.
+
+    IMPORTANTE:
+    z-index SOLO funciona si el elemento tiene una posición distinta
+    de static:
+        - position: relative
+        - position: absolute
+        - position: fixed
+        - position: sticky
+    (Con position: static NO se aplica)
+
+    REGLAS PRINCIPALES:
+    • Los elementos con z-index mayor aparecen por ENCIMA.
+    • Si no se especifica, el valor por defecto es z-index: auto (similar a 0).
+    • Solo afecta entre elementos que comparten el MISMO contexto de apilamiento.
+*/
+
+/* ======================================================= */
+/* Estilos base de las cajas                               */
+/* ======================================================= */
+
+.contenedor{
+    width: 100%;
+    position: relative;
+}
+
+.caja {
+	width: 200px;
+	height: 200px;
+	background: #f2f2f2;
+	font-size: 40px;
+	margin: 40px;
+	color: #000;
+	border: 2px solid currentColor;
+	padding: 10px;
+	border-radius: 5px;
+    position: absolute;
+}
+
+/* ======================================================= */
+/* Ejemplo de superposición con z-index                    */
+/* ======================================================= */
+.caja-1 {
+	top: 0px;
+	left: 0px;                    
+	background: red
+}
+
+.caja-2 {
+	top: 100px;
+	left: 100px;                 
+	background: green
+}
+
+/* Caja 3 – sin z-index definido */
+.caja-3 {
+    top: 200px;
+	left: 200px;
+	background: blue
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Control del desbordamiento: overflow</title>
+		<link rel="stylesheet" href="22_overflow.css" />
+
+		<!-- ======================================================= -->
+		<!--                   EXPLICACIÓN DE OVERFLOW               -->
+		<!-- ======================================================= -->
+		<!--
+			overflow indica qué hacer cuando el CONTENIDO es MÁS GRANDE que
+			el contenedor que lo contiene.
+
+			VALORES:
+
+			✔ visible (valor por defecto)
+			  - Se muestra incluso si se sale del contenedor.
+			  - No recorta nada.
+
+			✔ hidden
+			  - Recorta todo lo que sobresale.
+			  - Útil como “máscara” o para evitar fugas visuales.
+
+			✔ scroll
+			  - Fuerza barras de scroll SIEMPRE.
+
+			✔ auto
+			  - Solo muestra scroll si es necesario.
+			  - La opción más utilizada.
+
+			También existen:
+			    overflow-x  → controla izquierda/derecha
+			    overflow-y  → controla arriba/abajo
+
+			Prueba cada valor para ver cómo se comporta visualmente.
+		-->
+	</head>
+
+	<body>
+		<h1>Propiedad <code>overflow</code> en CSS</h1>
+
+		<ul>
+			<li><b>visible</b> deja que el contenido sobresalga.</li>
+			<li><b>hidden</b> lo recorta sin mostrar scroll.</li>
+			<li><b>scroll</b> fuerza barras de desplazamiento.</li>
+			<li><b>auto</b> pone scroll solo cuando hace falta.</li>
+		</ul>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO DEMOSTRATIVO                                   -->
+		<!-- ======================================================= -->
+		<div class="contenedor">
+			<p class="parrafo">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, corrupti exercitationem explicabo ex nihil doloribus saepe quas numquam incidunt veniam in quae laboriosam autem ipsum architecto accusantium soluta sunt esse vero vitae alias optio dolorum aliquam non! Numquam modi unde delectus exercitationem aliquam debitis doloribus itaque, officiis labore molestias ullam sunt adipisci iste! Sunt nobis praesentium laborum deserunt doloribus reprehenderit eligendi dicta iusto doloremque culpa aut mollitia nisi molestiae odit eum aliquid numquam, impedit officiis quasi quisquam consequuntur harum. Nesciunt culpa, consectetur nobis numquam, alias quisquam, neque voluptates quas voluptas natus nostrum est maiores mollitia? Excepturi aspernatur minus iusto nesciunt dolores ducimus ab accusantium omnis inventore, perferendis consequuntur modi nam laudantium ex libero facilis doloremque dolor quam praesentium incidunt dignissimos ut alias cupiditate nulla. Fugiat expedita earum consequuntur possimus facere, similique repellendus, nam aspernatur quam nihil vel reiciendis dolor quos maxime quo iste recusandae quidem ea libero quod quas distinctio. Eveniet iste, accusamus laborum perferendis, numquam nihil hic animi aut quisquam veniam aperiam at maiores ipsum, facilis non ullam similique adipisci sapiente. Esse quidem, eveniet quo illum modi culpa aspernatur veritatis dolor pariatur sapiente et, tenetur perferendis deserunt, vitae voluptatum veniam facilis tempore fuga saepe ipsa itaque animi incidunt quas. Asperiores perspiciatis eum cupiditate deserunt at accusamus, laudantium aut? Aperiam laudantium cumque deleniti quaerat, veritatis consectetur? Quidem, saepe ipsam. Tenetur, dolorem. Similique facilis rerum odit, nemo voluptas minima hic cupiditate pariatur voluptatibus earum aliquam iure tempora ipsa quos assumenda nulla illum libero beatae? Assumenda nisi quia aut molestiae quidem, ab accusamus consequatur, facilis rerum, nam error perspiciatis inventore fugit maxime? Omnis cupiditate libero delectus labore, eaque quisquam asperiores eligendi soluta, voluptas hic excepturi deleniti dolore earum exercitationem sunt, animi aliquid consectetur laudantium recusandae facilis mollitia accusamus ex? At beatae omnis porro voluptatibus tempore, illum quia eius libero accusamus saepe optio qui error, dolorum fugiat deserunt obcaecati molestias ex hic iusto dolorem. Dolorum deserunt alias assumenda quae cumque facere esse minima odio, officia praesentium mollitia nemo, tenetur quibusdam. Rerum, placeat. Debitis harum quis tenetur, itaque dolores veniam rerum vel laborum optio, tempora obcaecati ex! Repellendus, natus nihil aliquam temporibus iusto similique blanditiis corrupti fuga quos! Ad unde, ipsa corrupti at pariatur debitis optio distinctio eligendi similique! Corporis, tempora. Fugiat ullam eveniet fugit harum quisquam repudiandae enim earum totam neque mollitia dolorem dolor, corrupti nam aliquam explicabo quod debitis commodi, aperiam odio deleniti placeat possimus facilis soluta? Obcaecati temporibus reprehenderit sunt debitis assumenda, deserunt facere voluptatem aspernatur totam cupiditate accusantium asperiores pariatur quo autem tenetur aliquam doloribus. Earum ea provident deleniti nulla quas temporibus, ad soluta sapiente exercitationem molestiae consectetur consequuntur ipsa qui incidunt corrupti in natus rerum sunt aliquid quisquam facere? Magni tempora laboriosam ex obcaecati quia, eaque illo corporis dolore similique, accusantium commodi soluta amet et dolor est natus eos iste quidem doloribus. Facere nostrum provident iure nemo deleniti reiciendis illo aspernatur consequatur temporibus minus quo libero culpa, neque voluptatem omnis in quibusdam. Pariatur ullam eius ad beatae iure aspernatur necessitatibus, repellat quam commodi rem inventore, quos repellendus, placeat neque.
+			</p>
+		</div>
+
+		<!--
+			Actividad para tus alumnos:
+			- Cambia overflow: hidden → verás cómo el texto que sobresale desaparece.
+			- Cambia overflow: scroll → aparecen barras siempre.
+			- Cambia overflow: visible → el texto se sale del recuadro.
+			- Cambia overflow: auto → scroll solo si hace falta.
+		-->
+	</body>
+</html>

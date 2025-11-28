@@ -1,0 +1,96 @@
+/* ======================================================= */
+/* USO DE FLOAT EN CSS                                     */
+/* ======================================================= */
+/*
+    float permite desplazar un elemento hacia la izquierda o derecha,
+    dejando que el resto del contenido (normalmente texto) fluya
+    alrededor de él.
+
+    Tradicionalmente se usaba para:
+    - Crear columnas
+    - Maquetar cajas a izquierda y derecha
+    - Menús horizontales
+
+    PERO HOY EN DÍA:
+    - Para layouts es mejor usar FLEX o GRID.
+    - float se mantiene principalmente para envolver texto alrededor
+      de imágenes (su uso más lógico actualmente).
+
+    PROBLEMA CLÁSICO:
+    Un contenedor que contiene elementos flotantes pierde su altura.
+    Para evitarlo, se usa:
+        overflow: hidden;
+        o clearfix (veremos más adelante).
+*/
+
+/* ======================================================= */
+/* Reset básico                                            */
+/* ======================================================= */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: lightgrey;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+/* ======================================================= */
+/* Tarjetas de ejemplo                                     */
+/* ======================================================= */
+.tarjeta {
+	background-color: white;
+	margin: 10px 0;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 15px;
+
+	/*
+        IMPORTANTE:
+        Un contenedor con elementos flotantes TIENE que controlar
+        el colapso de altura, por eso usamos overflow: hidden.
+	*/
+	overflow: hidden;
+}
+
+/* ======================================================= */
+/* Ejemplo 1: Imagen con texto alrededor                   */
+/* ======================================================= */
+.tarjeta img {
+	width: 200px;
+	float: left;         /* El texto se acomodará a la derecha */
+	margin-right: 20px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+
+/* ======================================================= */
+/* Ejemplo 2: Posicionar cajas con float                   */
+/* (Recordatorio: hoy se usa flex/grid para esto)          */
+/* ======================================================= */
+.caja {
+	background: rgb(0, 77, 179);
+	color: white;
+	border: 2px solid black;
+	padding: 10px;
+	width: 120px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 5px;
+	margin: 10px 0;
+}
+
+.caja1 {
+	float: left;
+}
+
+.caja2 {
+	float: right;
+}

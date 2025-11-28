@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightblue;
+    font-family: "REM", "sans-serif";
+}
+
+.contenedor{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-radius: 20px;
+    
+
+    .titulo{
+        margin-bottom: 20px;
+    }
+
+    .galeria {
+        figure{
+            cursor: pointer;
+            width: 400px;
+            display: inline-block;
+            margin: 4px;
+
+            img{
+                width: 100%;
+                border-radius: 10px;
+                filter: grayscale();
+                transition: 1s;
+                border: 2px solid transparent;
+                padding: 2px;
+            }
+            &:hover img{
+                filter: none;
+                border: 2px solid black
+            }
+            &:active img{
+                position: relative;
+                width: 110%;
+            }
+            
+            figcaption{
+                font-size: 10px;
+                color: gray;
+            }
+
+            &:hover figcaption{
+                color: black;
+                font-weight: bolder;
+            }
+        }
+    }
+}

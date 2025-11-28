@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+header{
+    .cabecera{
+        background-color: rgb(103, 113, 170);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+nav {
+    background-color: rgb(3, 12, 141);
+    margin-bottom: 20px;
+        /* Center elementos inline o inline-block */
+    text-align: center;  
+    padding: 10px;
+    position: sticky;
+    top: 0;         
+
+    a{
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        margin: auto;
+        border-radius: 5px;
+            
+        &:hover{
+            background-color: green;
+        }
+    }
+}
+
+
+main{
+    width: 80%;
+    margin: 0px auto;
+    .titulo {
+        margin-bottom: 20px;
+    }
+    .post {
+        p {
+            line-height: 20px;
+        }
+    }
+}

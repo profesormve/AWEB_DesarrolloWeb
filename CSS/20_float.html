@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Uso de float en CSS</title>
+		<link rel="stylesheet" href="20_float.css" />
+
+		<!-- ======================================================= -->
+		<!--  USO DE FLOAT EN CSS                                    -->
+		<!-- ======================================================= -->
+		<!--
+			float permite situar elementos a la izquierda o derecha,
+			haciendo que el resto del contenido fluya alrededor.
+
+			Uso actual recomendado:
+			  - Envolver texto alrededor de imágenes.
+
+			Uso antiguo (ya NO recomendado):
+			  - Crear columnas
+			  - Maquetación de layouts
+			  (Hoy usamos FLEX o GRID para eso)
+
+			Problema clásico:
+			  Los elementos flotantes pueden hacer que el contenedor
+			  pierda altura → usamos overflow: hidden en el contenedor.
+		-->
+	</head>
+
+	<body>
+        <div class="tarjeta">
+            <h1>Uso de <code>float</code> en CSS</h1>
+
+            <ul>
+                <li><b>float:left/right</b> mueve el elemento y deja fluir contenido alrededor.</li>
+                <li>Ideal para <b>imágenes con texto alrededor</b>.</li>
+                <li>Puede usarse para cajas, pero hoy en día se prefiere <b>flex</b> o <b>grid</b>.</li>
+                <li>Los elementos flotantes hacen colapsar el alto del contenedor:
+                    <b>solución → overflow:hidden</b>.</li>
+            </ul>
+        </div>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 1: TEXTO QUE ENVUELVE UNA IMAGEN                -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 1 — Texto alrededor de la imagen</h2>
+		<div class="tarjeta">
+			<p>
+				<img src="./imagenes/arbol.png" alt="Imagen flotante" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta
+				corrupti veniam voluptates perferendis. Iusto veniam odio voluptates id
+				maiores temporibus quis, libero, labore ea eius consequuntur expedita
+				explicabo. Maiores placeat ea sint accusantium dicta. Magnam, deserunt
+				inventore pariatur earum repudiandae nulla dolore accusamus, nobis ab
+				quibusdam quia atque [...]
+			</p>
+		</div>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO 2: POSICIONAR CAJAS CON FLOAT (NO ideal hoy)    -->
+		<!-- ======================================================= -->
+		<h2>Ejemplo 2 — Cajas flotando a izquierda y derecha</h2>
+		<div class="tarjeta">
+			<div class="caja caja1">1</div>
+			<div class="caja caja2">2</div>
+			<!-- 
+                Nota: Estas cajas se alinean a izquierda y derecha,
+                pero hoy en día esto sería más fácil y limpio con:
+
+                display: flex;
+                justify-content: space-between;
+			-->
+		</div>
+
+	</body>
+</html>

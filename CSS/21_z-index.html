@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Control de profundidad con z-index</title>
+		<link rel="stylesheet" href="21_z-index.css" />
+
+		<!-- ======================================================= -->
+		<!--             EXPLICACIÓN DE Z-INDEX EN CSS              -->
+		<!-- ======================================================= -->
+		<!--
+			z-index nos permite controlar la superposición de elementos,
+			decidiendo cuál queda delante y cuál queda detrás.
+
+			Para usar z-index correctamente:
+			✔ El elemento debe tener position distinto a static.
+			✔ Cuanto mayor el z-index, más “arriba” estará en la pantalla.
+			✔ Si no se indica ningún valor, se usa auto (similar a 0).
+
+			Ideal para:
+			- Modales
+			- Menús desplegables
+			- Tooltips
+			- Elementos solapados
+			- Ventanas superpuestas
+		-->
+	</head>
+
+	<body>
+		<h1>Uso de <code>z-index</code> para controlar la profundidad</h1>
+
+		<ul>
+			<li>Los elementos con <b>z-index mayor</b> se muestran por encima.</li>
+			<li><b>Solo funciona</b> con position: relative, absolute, fixed o sticky.</li>
+			<li>El valor por defecto es <code>auto</code> (como “0”).</li>
+			<li>Útil para controlar <b>superposiciones</b>.</li>
+		</ul>
+
+		<!-- ======================================================= -->
+		<!-- EJEMPLO VISUAL DE SUPERPOSICIÓN                        -->
+		<!-- ======================================================= -->
+
+        <div class="contenedor">
+            <!-- Caja 1 (más atrás) -->
+            <div class="caja caja-1">Caja 1</div>
+
+            <!-- Caja 2 (encima de la 1) -->
+            <div class="caja caja-2">Caja 2</div>
+
+            <!-- Caja 3 (valor auto → detrás si otros tienen z mayor) -->
+            <div class="caja caja-3">Caja 3</div>
+        </div>
+
+		<!--
+        
+			Prueba cambiar los valores:
+			    z-index: 10
+			    z-index: -1
+			    z-index: auto
+
+			Y verás cómo cambian las posiciones.
+		-->
+	</body>
+</html>
