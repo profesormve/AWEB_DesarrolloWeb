@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="26_box-sizing.css" />
+	<title>Box Sizing</title>
+
+	<!-- ======================================================= -->
+	<!-- USO DE BOX-SIZING EN CSS                                -->
+	<!-- ======================================================= -->
+	<!--
+        Este ejemplo muestra cómo padding y border afectan al tamaño
+        REAL de una caja, y cómo box-sizing: border-box soluciona esto.
+
+        Con contenido (content-box):
+            width = solo contenido
+            → padding y border aumentan el tamaño total
+
+        Con border-box:
+            width = contenido + padding + border
+            → la caja SIEMPRE mide lo que tú defines
+
+        Es el modo recomendado en casi todos los proyectos modernos.
+	-->
+</head>
+
+<body>
+
+	<h1>Ejemplo de <code>box-sizing</code></h1>
+
+	<!-- Caja sin padding ni borde -->
+	<div class="caja regular">Caja Regular</div>
+
+	<!-- Caja con padding -->
+	<div class="caja padding">Caja con padding</div>
+
+	<!-- Caja con borde -->
+	<div class="caja borde">Caja con borde</div>
+
+	<!-- Caja con padding + borde -->
+	<div class="caja borde padding">Caja borde + padding</div>
+
+</body>
+</html>

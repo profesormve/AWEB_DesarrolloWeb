@@ -38,11 +38,15 @@ body{
             }
             &:hover img{
                 filter: none;
-                border: 2px solid black
+                border: 2px solid black;
             }
             &:active img{
                 position: relative;
-                width: 110%;
+                transform: scale(110%);
+                z-index: 2;
+                + figcaption{
+                    display: none;
+                }
             }
             
             figcaption{

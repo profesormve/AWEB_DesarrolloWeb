@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Animaciones en CSS</title>
+	<link rel="stylesheet" href="25_animaciones.css" />
+
+	<!-- ======================================================= -->
+	<!--  USO DE ANIMACIONES EN CSS                              -->
+	<!-- ======================================================= -->
+	<!--
+		Las animaciones permiten modificar propiedades CSS mediante
+		@keyframes, definiendo estados intermedios.
+
+		Diferencias con transition:
+			- transition necesita un evento (hover, active, etc.)
+			- animation puede ejecutarse sola o repetirse infinitamente
+			- animation permite definir múltiples etapas, no solo inicio/fin
+
+		Conceptos clave:
+			animation-name           → nombre del keyframe
+			animation-duration       → duración
+			animation-delay          → tiempo antes de iniciar
+			animation-iteration-count→ repeticiones
+			animation-direction      → dirección de la animación
+			animation-timing-function→ curva de velocidad
+			animation-fill-mode      → comportamiento antes/después
+
+		Los @keyframes definen:
+			- Puntos iniciales (from/0%)
+			- Puntos finales (to/100%)
+			- Etapas intermedias (10%, 50%, 75%...)
+	-->
+</head>
+
+<body>
+
+	<h1>Ejemplo de animaciones CSS</h1>
+
+	<!-- Caja animada -->
+	<div class="caja">Caja</div>
+
+</body>
+</html>

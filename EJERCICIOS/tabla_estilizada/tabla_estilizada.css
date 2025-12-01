@@ -1,0 +1,71 @@
+body{
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+------------------------------------------------------------
+border-collapse
+------------------------------------------------------------
+Propiedad utilizada en tablas HTML para definir cómo se 
+comportan los bordes de las celdas (<td> y <th>).
+
+🔹 border-collapse: collapse;
+   - Fusiona los bordes adyacentes en uno solo.
+   - Elimina el espacio entre celdas.
+   - Da un aspecto más compacto y profesional a la tabla.
+
+🔹 border-collapse: separate; (valor por defecto)
+   - Mantiene los bordes separados para cada celda.
+   - Deja un pequeño espacio entre celdas (ajustable con 
+     la propiedad border-spacing).
+
+------------------------------------------------------------
+*/
+
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,1);
+    cursor: pointer;
+
+    th, td {
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        width: 20%;
+    }
+
+    thead{
+        background: #2c3e50;
+        color: white;
+    }
+
+    tbody{
+        tr{
+            &:nth-child(even){
+                background: #f4f6f7;
+            }
+            &:hover{
+                background: #e90707;
+                font-weight: 600;
+            }
+        }
+        td{
+            border-bottom: 1px solid #ddd;
+            &:hover{
+                color: white
+            }
+        }
+    }
+    tfoot{
+        background: #76cc60;
+        font-weight: bold;
+        td {
+            text-align: right;
+        }
+    }
+}

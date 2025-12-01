@@ -1,0 +1,125 @@
+/* ======================================================= */
+/* USO DE ANIMACIONES EN CSS                               */
+/* ======================================================= */
+/*
+    Las animaciones permiten cambiar propiedades de CSS de forma
+    progresiva mediante fotogramas clave (keyframes).
+
+    A diferencia de las transiciones:
+        - No necesitan un evento como hover para activarse.
+        - Pueden repetirse infinitamente.
+        - Pueden controlar cada etapa del movimiento.
+
+    Para crear una animación necesitamos:
+        1. Definir @keyframes → describe el movimiento o cambios.
+        2. Aplicar properties de animation al elemento.
+*/
+
+/* ======================================================= */
+/* Caja animada                                             */
+/* ======================================================= */
+.caja {
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	padding: 20px;
+	font-size: 28px;
+	border-radius: 5px;
+	background: #43ae75;
+
+	/* =================================================== */
+	/* PROPIEDADES PRINCIPALES DE ANIMATION                */
+	/* =================================================== */
+
+	/* Nombre de la animación definida en @keyframes */
+	animation-name: cambiarAncho;
+
+	/* Duración total de la animación */
+	animation-duration: 3s;
+
+	/* Espera antes de empezar la animación */
+	animation-delay: 0s;
+
+	/* Velocidad/curva de movimiento */
+	animation-timing-function: ease;
+
+	/* Repeticiones de la animación */
+	animation-iteration-count: infinite;
+
+	/* Dirección de la animación:
+		- normal            → avanza de from a to (default)
+		- reverse           → avanza de to a from
+		- alternate         → ida y vuelta
+		- alternate-reverse → vuelta y ida
+	*/
+	animation-direction: alternate;
+
+	/* 
+        MODO DE RELLENO (fill-mode)
+        Controla si el elemento mantiene los estilos del keyframe
+        antes o después de la animación.
+        
+        - none       → no conserva estilos (default)
+        - forwards   → conserva estilos del último keyframe
+        - backwards  → aplica estilos del primer keyframe durante el delay
+        - both       → combinación de forwards + backwards
+	*/
+	animation-fill-mode: both;
+
+	/* =================================================== */
+	/* ANIMACIÓN AL HACER HOVER                            */
+	/* =================================================== */
+	&:hover {
+		/*
+            Forma abreviada de animation:
+            animation: nombre duración timing delay repeticiones dirección fill;
+
+            Ejemplo aquí:
+                agitar         → nombre del keyframe
+                0.3s           → duración
+                ease-in        → ritmo
+                0s             → delay
+                infinite       → repeticiones infinitas
+                forwards       → mantiene el último estado al terminar
+		*/
+		animation: agitar 0.3s ease-in 0s infinite forwards;
+	}
+}
+
+/* ======================================================= */
+/* ANIMACIÓN 1: cambiarAncho                               */
+/* ======================================================= */
+/*
+    Esta animación hace que la caja aumente su ancho de 200px a 400px.
+    Solo tiene dos estados: from (inicio) y to (final).
+*/
+@keyframes cambiarAncho {
+	from {
+		width: 200px;
+	}
+
+	to {
+		width: 400px;
+	}
+}
+
+/* ======================================================= */
+/* ANIMACIÓN 2: agitar (para hover)                        */
+/* ======================================================= */
+/*
+    Animación corta que mueve la caja arriba/abajo simulando un temblor.
+    Útil para microinteracciones.
+*/
+@keyframes agitar {
+	0% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(5px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}

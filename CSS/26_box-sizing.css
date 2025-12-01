@@ -1,0 +1,75 @@
+/* ======================================================= */
+/* USO DE BOX-SIZING EN CSS                                */
+/* ======================================================= */
+/*
+    box-sizing controla cómo se calcula el tamaño total
+    (ancho y alto) de un elemento.
+
+    Recordatorio: el TAMAÑO TOTAL de una caja en CSS se calcula así:
+
+        width + padding + border + margin
+
+    Existen dos modos principales:
+    
+    1) content-box (valor por defecto)
+       - width y height SOLO aplican al contenido.
+       - El padding y el border se SUMAN al tamaño total.
+       - El elemento crece más de lo esperado.
+    
+    2) border-box (recomendado)
+       - width y height incluyen contenido + padding + border.
+       - El tamaño total se mantiene estable.
+       - Más fácil para maquetación.
+
+    ¿Por qué usamos el “hack global”?
+        *, *::before, *::after { box-sizing: border-box; }
+
+        Porque evita cálculos molestos
+        y hace que todos los elementos midan lo que tú dices.
+*/
+
+
+/* ======================================================= */
+/* Estilo de las cajas para comparar                        */
+/* ======================================================= */
+.caja {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	font-size: 24px;
+	background: #728ef1;
+	border-radius: 5px;
+	vertical-align: top;
+	margin: 10px;
+	
+	/* box-sizing: border-box;  */
+	
+
+	&.padding {
+		padding: 20px;
+	}
+
+	&.borde {
+		border: 10px solid #1f114e;
+	}
+}
+
+
+
+
+/* ======================================================= */
+/* Reset de box-sizing global                               */
+/* ======================================================= */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	/* box-sizing: border-box;  */
+
+	/*
+        Con esto:
+        - Si dices width: 200px, SIEMPRE mide 200px,
+          tenga padding o borde.
+    */
+}

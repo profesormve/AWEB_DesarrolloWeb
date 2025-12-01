@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Uso de transition en CSS</title>
+	<link rel="stylesheet" href="transiciones.css" />
+
+	<!-- ======================================================= -->
+	<!--  USO DE TRANSITION EN CSS                               -->
+	<!-- ======================================================= -->
+	<!--
+        transition permite animar de forma suave los cambios en las
+        propiedades CSS de un elemento.
+
+        ¿Para qué sirve?
+            - Efectos en botones (hover, focus)
+            - Suavizar transformaciones (scale, rotate, skew, translate)
+            - Cambios de color, tamaño, opacidad…
+            - Animaciones simples sin usar @keyframes
+
+        Componentes de transition:
+            1. transition-property → qué propiedad se va a animar
+            2. transition-duration → cuánto dura la animación
+            3. transition-timing-function → curva de velocidad
+            4. transition-delay → retraso antes de iniciar
+
+        Forma estándar:
+            transition: propiedad duración función-tiempo delay;
+
+        Forma abreviada (la más usada):
+            transition: all 300ms ease;
+
+        NOTA:
+            transition se activa solo cuando la propiedad cambia
+            (por ejemplo, en :hover).
+	-->
+</head>
+
+<body>
+
+	<h1>Ejemplo de <code>transition</code> en CSS</h1>
+
+	<!-- Botón que cambia suavemente con hover -->
+	<button>Botón</button>
+
+</body>
+</html>

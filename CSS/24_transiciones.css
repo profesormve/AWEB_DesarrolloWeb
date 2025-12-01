@@ -1,0 +1,85 @@
+/* ======================================================= */
+/* USO DE TRANSITION EN CSS                                */
+/* ======================================================= */
+/*
+    transition permite que los cambios en las propiedades CSS se
+    animen de forma fluida y progresiva, en lugar de cambiarse
+    instantáneamente.
+
+    Propiedades típicas que se pueden animar:
+        - background-color
+        - width / height
+        - opacity
+        - transform (scale, rotate, translate)
+        - color
+        - border-radius
+		- all (default)
+
+    Estructura (forma larga):
+        transition-property: color;
+        transition-duration: 300ms;
+        transition-timing-function: ease;
+        transition-delay: 0ms;
+
+    Funciones de tiempo más usadas:
+        ease          → inicio y final suaves (default)
+        linear        → velocidad constante
+        ease-in       → empieza lento
+        ease-out      → termina lento
+        ease-in-out   → inicio lento + final lento
+        cubic-bezier(n,n,n,n)  → curva personalizada (avanzado) - función de tiempo personalizada. 
+		    Curvas personalizadas: https://easings.net
+
+	Default:
+	 - transition-property: all
+	 - transition-timing-function: ease;
+	 - transition-delay: 0ms;
+
+*/
+
+/* ======================================================= */
+/* Estilo del botón y transición                           */
+/* ======================================================= */
+button {
+	background: #000;
+	color: #fff;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	padding: 30px 60px;
+	margin: 20px;
+	border-radius: 10px;
+
+	/*
+        TRANSITION ABREVIADA:
+        transition: qué cambia   duración   función-de-tiempo;
+
+        all → cualquier propiedad que cambie será animada.
+        300ms → duración de la animación.
+        ease → velocidad suave al inicio y al final.
+	*/
+
+	transition-property: all;
+	transition-duration: 500ms;
+	transition-timing-function: ease;
+	transition-delay: 100ms;
+
+	/* transition: all 500ms ease 100ms; */
+
+	&:hover {
+		background: #159215;
+		transform: scale(1.1);
+	}
+
+}
+
+/* ======================================================= */
+/* Efecto al pasar el ratón (hover)                         */
+/* ======================================================= */
+/*
+    Aquí ocurren los cambios que serán animados:
+        - Cambio de color de fondo
+        - transform: scale(1.1) → crecer un 10%
+
+    Gracias a transition, estos cambios no son bruscos.
+*/

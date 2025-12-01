@@ -1,0 +1,79 @@
+/* ======================================================= */
+/* USO DE TRANSFORM EN CSS                                 */
+/* ======================================================= */
+/*
+    transform modifica visualmente un elemento SIN alterar el espacio 
+    que ocupa en la página (no afecta al flujo normal).
+
+    Transformaciones más comunes:
+        rotate( )    → gira el elemento.
+        scale( )     → agrandar o reducir.
+        translate( ) → mover visualmente.
+        skew( )      → inclinar.
+    
+    Se pueden combinar:
+        transform: rotate(45deg) scale(0.8) translateX(50px);
+
+    IMPORTANTE:
+        transition permite animar los cambios de transform de forma suave.
+
+    Nota:
+        transform no afecta al layout, solo al render final del elemento.
+*/
+
+/* ======================================================= */
+/* Reset básico                                             */
+/* ======================================================= */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #f2f2f2;
+	padding: 20px;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+
+/* ======================================================= */
+/* Tarjeta de explicación                                   */
+/* ======================================================= */
+.tarjeta {
+	background: white;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 25px;
+}
+
+/* ======================================================= */
+/* Caja con la imagen                                       */
+/* ======================================================= */
+.caja {
+	width: 400px;
+	margin: 40px 0;
+	background: #ccc;
+
+	transition: all ease 0.5s;
+
+	img {
+		width: 100%;
+		border-radius: 15px;
+	}
+}
+
+
+/* ======================================================= */
+/* Transformación activada por el checkbox                  */
+/* ======================================================= */
+/*
+*/
+.checkbox:checked + .caja {
+	transform: rotate(90deg) scale(0.5);
+}

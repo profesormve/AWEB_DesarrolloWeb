@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Uso de transform en CSS</title>
+	<link rel="stylesheet" href="23_transform.css" />
+
+	<!-- ======================================================= -->
+	<!--  USO DE TRANSFORM EN CSS                                -->
+	<!-- ======================================================= -->
+	<!--
+        transform permite modificar visualmente un elemento sin alterar
+        el espacio que ocupa realmente en la página.
+
+        Transformaciones más usadas:
+            - rotate( )   → girar elementos en grados.
+            - scale( )    → agrandar o reducir el tamaño.
+            - translate( )→ mover el elemento sin afectar al layout.
+            - skew( )     → inclinar.
+            - Combinación de varias transformaciones.
+
+        Muy útil para:
+            - Animaciones
+            - Efectos hover
+            - Interacciones visuales
+            - Menús, tarjetas, sliders, etc.
+
+        Relación con transition:
+            transition suaviza cualquier cambio de transform para animarlo.
+
+        Nota importante:
+            transform NO cambia el tamaño real ni empuja otros elementos;
+            solo afecta a cómo se representa visualmente.
+	-->
+</head>
+
+<body>
+
+	<!-- ======================================================= -->
+	<!-- EJEMPLO DE TRANSFORMACIÓN ACTIVADA POR CHECKBOX         -->
+	<!-- ======================================================= -->
+	<div class="tarjeta">
+
+		<h1>Uso de <code>transform</code> en CSS</h1>
+
+		<ul>
+			<li><b>rotate()</b>: gira el elemento en grados.</li>
+			<li><b>scale()</b>: agranda o reduce tamaño.</li>
+			<li><b>translate()</b>: mueve el elemento visualmente.</li>
+			<li>Podemos combinar varios: <code>rotate + scale + translate</code>.</li>
+			<li>Con <b>transition</b> animamos los cambios suavemente.</li>
+			<li>Importante: transform NO afecta al espacio real del elemento.</li>
+		</ul>
+	</div>
+
+		<!-- Checkbox que actúa como interruptor -->
+	<!-- <label for="transformar">Transformar</label>
+	<input type="checkbox" class="checkbox" id="transformar" /> -->
+
+	<!-- Caja con imagen que se transformará -->
+	<div class="caja" id="caja">
+		<img src="imagenes/montaña.png" alt="Montaña" />
+	</div>
+
+
+
+</body>
+</html>
