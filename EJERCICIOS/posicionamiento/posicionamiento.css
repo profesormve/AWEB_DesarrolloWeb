@@ -1,0 +1,118 @@
+/* ================================ */
+/*   RESET GENERAL + CONFIG BASE    */
+/* ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: system-ui, sans-serif;
+}
+
+
+/* ================================ */
+/*             HEADER               */
+/* ================================ */
+/* Barra superior fija en altura */
+
+header {
+    height: 100px;
+    background-color: #1e40af;   /* azul */
+    color: white;
+    padding: 20px;
+    border-bottom: 3px solid #0c2765;
+}
+
+
+/* ================================ */
+/*       NAV LATERAL DERECHO        */
+/* ================================ */
+/* Ocupa toda la altura de pantalla, ancho 200px, fijo */
+
+nav {
+    background-color: #16a34a;   /* verde */
+    width: 200px; 
+    float: left;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 20px;
+    border-left: 3px solid #0f6d39;
+}
+
+nav h2 {
+    color: white;  
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li + li {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ================================ */
+/*               MAIN               */
+/* ================================ */
+/* Ocupa el espacio exacto disponible entre header y footer */
+
+main {
+    background-color: #e5e7eb;   /* gris claro */
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;            /* scroll interno si hay mucho contenido */
+}
+
+main h2 {
+    margin-bottom: 15px;
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+}
+
+main article {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px dashed #9ca3af;
+}
+
+
+/* ================================ */
+/*              FOOTER              */
+/* ================================ */
+/* Siempre visible y pegado abajo   */
+
+footer {
+    height: 60px;
+    background-color: #6b21a8;   /* morado */
+    color: white;
+    text-align: center;
+
+    padding: 15px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    border-top: 3px solid #3f0f66;
+}
